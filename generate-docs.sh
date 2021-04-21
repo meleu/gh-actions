@@ -77,10 +77,10 @@ function main() {
 
     #echo "--- Configure CNAME..."
     #echo 'docs.retroachievements.org' > CNAME
-    #cd - >/dev/null
     #echo "--- Done!"
     #echo
 
+    cd - >/dev/null
     cp -R img docs.wiki/
 
     echo "--- Generating the custom mkdocs.yml..."
