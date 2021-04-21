@@ -75,11 +75,11 @@ function main() {
     echo "--- Done!"
     echo
 
-    echo "--- Configure CNAME..."
-    echo 'docs.retroachievements.org' > CNAME
-    cd - >/dev/null
-    echo "--- Done!"
-    echo
+    #echo "--- Configure CNAME..."
+    #echo 'docs.retroachievements.org' > CNAME
+    #cd - >/dev/null
+    #echo "--- Done!"
+    #echo
 
     cp -R img docs.wiki/
 
