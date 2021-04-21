@@ -7,6 +7,11 @@
 
 readonly SCRIPT_DIR="$(cd "$(dirname $0)" && pwd)"
 
+function exit_error() {                                                                                     
+    echo -e "ERROR: $@" >&2                                                                                 
+    exit 1                                                                                                  
+}       
+
 generate_nav_section() {
     local tmp
     local mdfile
@@ -74,6 +79,7 @@ function main() {
     echo 'docs.retroachievements.org' > CNAME
     cd - >/dev/null
     echo "--- Done!"
+    echo
 
     cp -R img docs.wiki/
 
@@ -84,8 +90,6 @@ function main() {
     echo
 
     docker container run --rm -it -v ${PWD}:/docs squidfunk/mkdocs-material build
-
-    rm -rf docs.wiki
 }
 
 
