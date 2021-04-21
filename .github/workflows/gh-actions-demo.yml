@@ -2,14 +2,7 @@ name: GitHub Actions Demo
 
 #on: [push]
 on: 
-  workflow_dispatch:
-    inputs:
-      logLevel:
-        description: 'Log level'
-        required: true
-        default: 'warning'
-      tags:
-        description: 'Test scenario tags'
+  workflow_dispatch
 
 jobs:
   Explore-GitHub-Actions:
