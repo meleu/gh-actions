@@ -1,0 +1,3398 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="RetroAchievements.org Documentation Project">
+      
+      
+      
+      
+        <link rel="canonical" href="https://docs.retroachievements.org/Emulator-Support-and-Issues/">
+      
+      <link rel="icon" href="../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.2">
+    
+    
+      
+        <title>Emulator Support and Issues - RADocs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.6f955dcd.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ef6f36e2.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#4051b5">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="indigo" data-md-color-accent="amber">
+  
+    
+    <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#supported-consoles" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="RADocs" class="md-header__button md-logo" aria-label="RADocs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path d="M480.07 96H160a160 160 0 1 0 114.24 272h91.52A160 160 0 1 0 480.07 96zM248 268a12 12 0 0 1-12 12h-52v52a12 12 0 0 1-12 12h-24a12 12 0 0 1-12-12v-52H84a12 12 0 0 1-12-12v-24a12 12 0 0 1 12-12h52v-52a12 12 0 0 1 12-12h24a12 12 0 0 1 12 12v52h52a12 12 0 0 1 12 12zm216 76a40 40 0 1 1 40-40 40 40 0 0 1-40 40zm64-96a40 40 0 1 1 40-40 40 40 0 0 1-40 40z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            RADocs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Emulator Support and Issues
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/RetroAchievements/docs/wiki/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    RetroAchievements/docs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        General
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Developer-docs/" class="md-tabs__link md-tabs__link--active">
+        Developers
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Home-pt_BR/" class="md-tabs__link">
+        Portugues
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Home-es/" class="md-tabs__link">
+        Español
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="RADocs" class="md-nav__button md-logo" aria-label="RADocs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path d="M480.07 96H160a160 160 0 1 0 114.24 272h91.52A160 160 0 1 0 480.07 96zM248 268a12 12 0 0 1-12 12h-52v52a12 12 0 0 1-12 12h-24a12 12 0 0 1-12-12v-52H84a12 12 0 0 1-12-12v-24a12 12 0 0 1 12-12h52v-52a12 12 0 0 1 12-12h24a12 12 0 0 1 12 12v52h52a12 12 0 0 1 12 12zm216 76a40 40 0 1 1 40-40 40 40 0 0 1-40 40zm64-96a40 40 0 1 1 40-40 40 40 0 0 1-40 40z"/></svg>
+
+    </a>
+    RADocs
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/RetroAchievements/docs/wiki/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    RetroAchievements/docs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" >
+      
+      <label class="md-nav__link" for="__nav_1">
+        General
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="General" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          General
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RetroAchievements-Manifesto/" class="md-nav__link">
+        RetroAchievements Manifesto
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Users-Code-of-Conduct/" class="md-nav__link">
+        Users Code of Conduct
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FAQ/" class="md-nav__link">
+        FAQ
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Global-Leaderboard-and-Achievement-Hunting-Rules/" class="md-nav__link">
+        Global Leaderboard and Achievement Hunting Rules
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../My-game-is-not-loading-achievements/" class="md-nav__link">
+        My game is not loading achievements
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../How-to-contribute-if-you-are-not-a-developer/" class="md-nav__link">
+        How to contribute if you are not a developer
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../System-X-wen/" class="md-nav__link">
+        System X wen
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Why-you-shouldn%27t-use-the-load-state-feature/" class="md-nav__link">
+        Why you shouldn't use the load state feature
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A-message-for-Achievement-Hunters-and-Completionists-about-revisions/" class="md-nav__link">
+        A message for Achievement Hunters and Completionists about revisions
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Multi-Disc-Games-Tutorial/" class="md-nav__link">
+        Multi-Disc Games Tutorial
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../How-to-configure-OBS-Studio-to-see-the-popups/" class="md-nav__link">
+        How to configure OBS Studio to see the popups
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RABot%2C-the-RA-Discord-Robot/" class="md-nav__link">
+        RABot, the RA Discord Robot
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Badge-and-Icon-Creation/" class="md-nav__link">
+        Badge and Icon Creation
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_15" type="checkbox" id="__nav_1_15" >
+      
+      <label class="md-nav__link" for="__nav_1_15">
+        RAEmulators
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="RAEmulators" data-md-level="2">
+        <label class="md-nav__title" for="__nav_1_15">
+          <span class="md-nav__icon md-icon"></span>
+          RAEmulators
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RAQUASI88/" class="md-nav__link">
+        RAQUASI88
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RALibretro/" class="md-nav__link">
+        RALibretro
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Downloads/" class="md-nav__link">
+        Downloads
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Free-Games/" class="md-nav__link">
+        Free Games
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Useful-Links/" class="md-nav__link">
+        Useful Links
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Contributing-with-the-docs/" class="md-nav__link">
+        Contributing with the docs
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../About-Us/" class="md-nav__link">
+        About Us
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      <label class="md-nav__link" for="__nav_2">
+        Developers
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Developers" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Developers
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Developer-docs/" class="md-nav__link">
+        Intro
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Developers-Code-of-Conduct/" class="md-nav__link">
+        Developer's Code of Conduct
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../How-to-Become-an-Achievement-Developer/" class="md-nav__link">
+        How to Become an Achievement Developer
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Getting-Started-as-an-Achievement-Developer/" class="md-nav__link">
+        Getting Started as an Achievement Developer
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../New-achievement-set-checklist/" class="md-nav__link">
+        New achievement set checklist
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Achievement-Scoring/" class="md-nav__link">
+        Achievement Scoring
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Memory-Inspector-Overview/" class="md-nav__link">
+        Memory Inspector Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_8" type="checkbox" id="__nav_2_8" >
+      
+      <label class="md-nav__link" for="__nav_2_8">
+        Achievement Logic Features
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Achievement Logic Features" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_8">
+          <span class="md-nav__icon md-icon"></span>
+          Achievement Logic Features
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Achievement-Logic-Features/" class="md-nav__link">
+        Intro
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Hit-Counts/" class="md-nav__link">
+        Hit Counts
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Delta-Values/" class="md-nav__link">
+        Delta Values
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Prior-Values/" class="md-nav__link">
+        Prior Values
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ResetIf-Flag/" class="md-nav__link">
+        ResetIf Flag
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PauseIf-Flag/" class="md-nav__link">
+        PauseIf Flag
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AndNext-and-OrNext-Flags/" class="md-nav__link">
+        AndNext and OrNext Flags
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AddSource-Flag/" class="md-nav__link">
+        AddSource Flag
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SubSource-Flag/" class="md-nav__link">
+        SubSource Flag
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AddHits-Flag/" class="md-nav__link">
+        AddHits Flag
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AddAddress-Flag/" class="md-nav__link">
+        AddAddress Flag
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Measured-Flag/" class="md-nav__link">
+        Measured Flag
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../BitCount-Size/" class="md-nav__link">
+        BitCount Size
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Combining-Flags/" class="md-nav__link">
+        Combining Flags
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Alt-Groups/" class="md-nav__link">
+        Alt Groups
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Minimum-Required-Versions-for-Logic-Features/" class="md-nav__link">
+        Minimum Required Versions for Logic Features
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_9" type="checkbox" id="__nav_2_9" >
+      
+      <label class="md-nav__link" for="__nav_2_9">
+        Real Examples
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Real Examples" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_9">
+          <span class="md-nav__icon md-icon"></span>
+          Real Examples
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Real-Examples/" class="md-nav__link">
+        Intro
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Using-Hit-Counts-as-a-Timer/" class="md-nav__link">
+        Using Hit Counts as a Timer
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Using-Delta-Values-and-Hit-Counts-to-Detect-an-Increment/" class="md-nav__link">
+        Using Delta Values and Hit Counts to Detect an Increment
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Simple-Example-of-How-to-Avoid-Load-State-Abusing/" class="md-nav__link">
+        Simple Example of How to Avoid Load State Abusing
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Circumvent-the-Problem-of-a-Counter-Incrementing-Twice-in-the-Same-Frame/" class="md-nav__link">
+        Circumvent the Problem of a Counter Incrementing Twice in the Same Frame
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Creating-a-Timer-with-ResetIf-Hits-based-on-the-Speed-of-the-Game/" class="md-nav__link">
+        Creating a Timer with ResetIf Hits based on the Speed of the Game
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Using-Add-Source-and-Deltas-for-Collectables-or-Similar-Achievements/" class="md-nav__link">
+        Using Add Source and Deltas for Collectables and Similar Achievements
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Achievement-Templates/" class="md-nav__link">
+        Achievement Templates
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Tips-and-Tricks/" class="md-nav__link">
+        Tips and Tricks
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Difficulty-Scale-and-Balance/" class="md-nav__link">
+        Difficulty Scale and Balance
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Achievement-Design/" class="md-nav__link">
+        Achievement Design
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Set-Development-Roadmap/" class="md-nav__link">
+        Set Development Roadmap
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Achievement-Set-Revisions/" class="md-nav__link">
+        Achievement Set Revisions
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Badge-and-Icon-Creation/" class="md-nav__link">
+        Badge and Icon Creation
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Leaderboards/" class="md-nav__link">
+        Leaderboards
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Rich-Presence/" class="md-nav__link">
+        Rich Presence
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Working-with-the-Right-ROM/" class="md-nav__link">
+        Working with the Right ROM
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Game-Identification/" class="md-nav__link">
+        Game Identification
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Emulator Support and Issues
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Emulator Support and Issues
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#supported-consoles" class="md-nav__link">
+    Supported Consoles
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#supported-but-not-validated" class="md-nav__link">
+    Supported But Not Validated
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unsupported-consoles" class="md-nav__link">
+    Unsupported Consoles
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#does-not-have-console-id" class="md-nav__link">
+    Does Not Have Console ID
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#retroachievements-emulator-requirements" class="md-nav__link">
+    RetroAchievements Emulator Requirements:
+  </a>
+  
+    <nav class="md-nav" aria-label="RetroAchievements Emulator Requirements:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#game-identification" class="md-nav__link">
+    Game Identification
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#emulator" class="md-nav__link">
+    Emulator
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#emulated-system" class="md-nav__link">
+    Emulated System
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#achievementsleaderboardsrich-presence" class="md-nav__link">
+    Achievements/Leaderboards/Rich Presence
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#softcore" class="md-nav__link">
+    Softcore
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hardcore" class="md-nav__link">
+    Hardcore
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#after-approval" class="md-nav__link">
+    After approval
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#changelog" class="md-nav__link">
+    Changelog
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Bonus-Sets/" class="md-nav__link">
+        Bonus Set Guide
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Achievements-for-ROM-hacks/" class="md-nav__link">
+        Achievements for ROM hacks
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Console-Specific-Tips/" class="md-nav__link">
+        Console Specific Tips
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      <label class="md-nav__link" for="__nav_3">
+        Portugues
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Portugues" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Portugues
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Home-pt_BR/" class="md-nav__link">
+        Introdução
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" >
+      
+      <label class="md-nav__link" for="__nav_3_2">
+        Geral
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Geral" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Geral
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RetroAchievements-Manifesto-pt_BR/" class="md-nav__link">
+        Manifesto RetroAchievements
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Users-Code-of-Conduct-pt_BR/" class="md-nav__link">
+        Código de Conduta do Usuário
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FAQ-pt_BR/" class="md-nav__link">
+        FAQ - Perguntas Frequentes
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../How-to-contribute-if-you-are-not-a-developer-pt_BR/" class="md-nav__link">
+        Como contribuir se você não é um desenvolvedor
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Multi-Disc-Games-Tutorial-pt_BR/" class="md-nav__link">
+        Tutorial para Jogos Multi-Discos
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" type="checkbox" id="__nav_3_3" >
+      
+      <label class="md-nav__link" for="__nav_3_3">
+        Desenvolvedores
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Desenvolvedores" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          Desenvolvedores
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Developer-docs-pt_BR/" class="md-nav__link">
+        Introdução
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Getting-Started-as-an-Achievement-Developer-pt_BR/" class="md-nav__link">
+        Primeiros Passos como um Desenvolvedor de Conquistas
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Achievement-Logic-Features-pt_BR/" class="md-nav__link">
+        Recursos de Lógica para Achievements
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3_4" type="checkbox" id="__nav_3_3_4" >
+      
+      <label class="md-nav__link" for="__nav_3_3_4">
+        Exemplos Reais
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Exemplos Reais" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_3_4">
+          <span class="md-nav__icon md-icon"></span>
+          Exemplos Reais
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Real-Examples-pt_BR/" class="md-nav__link">
+        Introdução
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Using-Hit-Counts-and-ResetIf-pt_BR/" class="md-nav__link">
+        Usando Hit Counts e ResetIf
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Using-Delta-Values-and-ResetIf-pt_BR/" class="md-nav__link">
+        Usando Delta Values e ResetIf
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Simple-Example-of-How-to-Avoid-Load-State-Abusing-pt_BR/" class="md-nav__link">
+        Simples Exemplo de como Evitar Abuso de Load State
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Tips-and-Tricks-pt_BR/" class="md-nav__link">
+        Dicas e Truques
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Console-Specific-Tips-pt_BR/" class="md-nav__link">
+        Dicas Específicas de Console
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Achievement-Templates-pt_BR/" class="md-nav__link">
+        Modelos de Achievement
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Difficulty-Scale-and-Balance-pt_BR/" class="md-nav__link">
+        Escala de Dificuldade e Equilíbrio
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Set-Development-Roadmap-pt_BR/" class="md-nav__link">
+        Roteiro de Desenvolvimento de um Set de Conquistas
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Badge-and-Icon-Creation-pt_BR/" class="md-nav__link">
+        Criação de Ícones e Emblemas
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Leaderboards-pt_BR/" class="md-nav__link">
+        Leaderboards
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Rich-Presence-pt_BR/" class="md-nav__link">
+        Rich Presence
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Achievement-Design-pt_BR/" class="md-nav__link">
+        Design de Conquistas
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      <label class="md-nav__link" for="__nav_4">
+        Español
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Español" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Español
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Home-es/" class="md-nav__link">
+        Introducción
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" >
+      
+      <label class="md-nav__link" for="__nav_4_2">
+        General
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="General" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          General
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RetroAchievements-Manifesto-es/" class="md-nav__link">
+        Manifesto RetroAchievements
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Users-Code-of-Conduct-es/" class="md-nav__link">
+        Código de Conducta del Usuario
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FAQ-es/" class="md-nav__link">
+        FAQ - Preguntas Frecuentes
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Global-Leaderboard-and-Achievement-Hunting-Rules-es/" class="md-nav__link">
+        Tablas Globales y Reglas para la Casería de Logros
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../My-game-is-not-loading-achievements-es/" class="md-nav__link">
+        Mi juego no esta cargando los logros
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../How-to-contribute-if-you-are-not-a-developer-es/" class="md-nav__link">
+        Como contribuir si no eres un desarrollador
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Why-you-shouldn%27t-use-the-load-state-feature-es/" class="md-nav__link">
+        Por que no deberías utilizar la función de cargar estado
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Contributing-with-the-docs-es/" class="md-nav__link">
+        Contribuyendo con los documentos
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../How-RA-Documentation-Works-es/" class="md-nav__link">
+        Como funciona la Documentación de RA
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Downloads-es/" class="md-nav__link">
+        Descargas
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3" type="checkbox" id="__nav_4_3" >
+      
+      <label class="md-nav__link" for="__nav_4_3">
+        Desarrolladores
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Desarrolladores" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_3">
+          <span class="md-nav__icon md-icon"></span>
+          Desarrolladores
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Developer-docs-es/" class="md-nav__link">
+        Intro
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Developers-Code-of-Conduct-es/" class="md-nav__link">
+        Código de Conducta del Desarrollador
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../How-to-Become-an-Achievement-Developer-es/" class="md-nav__link">
+        Como convertirme en un Desarrollador de Logros
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Getting-Started-as-an-Achievement-Developer-es/" class="md-nav__link">
+        Primeros pasos como un Desarrollador de Logros
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Memory-Inspector-Overview-es/" class="md-nav__link">
+        Un vistazo al Inspector de Memoria
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3_6" type="checkbox" id="__nav_4_3_6" >
+      
+      <label class="md-nav__link" for="__nav_4_3_6">
+        Características en la Logica de un Logro
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Características en la Logica de un Logro" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_3_6">
+          <span class="md-nav__icon md-icon"></span>
+          Características en la Logica de un Logro
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Achievement-Logic-Features-es/" class="md-nav__link">
+        Intro
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Hit-Counts-es/" class="md-nav__link">
+        Contador de Golpes (Hit Counts)
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Delta-Values-es/" class="md-nav__link">
+        Valores Delta
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ResetIf-Flag-es/" class="md-nav__link">
+        Bandera ResetIf
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PauseIf-Flag-es/" class="md-nav__link">
+        Bandera PauseIf
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AddSource-Flag-es/" class="md-nav__link">
+        Bandera AddSource
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SubSource-Flag-es/" class="md-nav__link">
+        Bandera SubSource
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AddHits-Flag-es/" class="md-nav__link">
+        Bandera AddHits
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Combining-Flags-es/" class="md-nav__link">
+        Combinando Banderas
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Alt-Groups-es/" class="md-nav__link">
+        Alt Groups
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Minimum-Required-Versions-for-Logic-Features-es/" class="md-nav__link">
+        Versiones Mínimas Requeridas para Funciones en la Lógica
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3_7" type="checkbox" id="__nav_4_3_7" >
+      
+      <label class="md-nav__link" for="__nav_4_3_7">
+        Ejemplos Reales
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Ejemplos Reales" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_3_7">
+          <span class="md-nav__icon md-icon"></span>
+          Ejemplos Reales
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Real-Examples-es/" class="md-nav__link">
+        Intro
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Using-Hit-Counts-as-a-Timer-es/" class="md-nav__link">
+        Utilizando Hit Counts como un Temporizador
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Using-Delta-Values-and-Hit-Counts-to-Detect-an-Increment-es/" class="md-nav__link">
+        Utilizando Valores Delta y Hit Counts para Detectar un Incremento
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Simple-Example-of-How-to-Avoid-Load-State-Abusing-es/" class="md-nav__link">
+        Un Ejemplo Simple en como evitar el Abuso de Estados de Guardado
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Circumvent-the-Problem-of-a-Counter-Incrementing-Twice-in-the-Same-Frame-es/" class="md-nav__link">
+        Evitar el Problema de que un Contador se Incremente Dos Veces en el Mismo Frame
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Creating-a-Timer-with-ResetIf-Hits-based-on-the-Speed-of-the-Game-es/" class="md-nav__link">
+        Creando un Temporizador con un ResetIf Hits basándote en la Velocidad de un Juego
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Achievement-Templates-es/" class="md-nav__link">
+        Plantillas para Logros
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Tips-and-Tricks-es/" class="md-nav__link">
+        Tips y Trucos
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Difficulty-Scale-and-Balance-es/" class="md-nav__link">
+        Escala de Dificultad y Balance
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Achievement-Design-es/" class="md-nav__link">
+        Diseño de Logros
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Set-Development-Roadmap-es/" class="md-nav__link">
+        Mapa de Desarrollo de Set
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Achievement-Set-Revisions-es/" class="md-nav__link">
+        Revisiones en Set de Logros
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Badge-and-Icon-Creation-es/" class="md-nav__link">
+        Creación de Iconos y Badges
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Leaderboards-es/" class="md-nav__link">
+        Tablas de Clasificación
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Rich-Presence-es/" class="md-nav__link">
+        Rich Presence
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Working-with-the-Right-ROM-es/" class="md-nav__link">
+        Trabajando con el ROM apropiado
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Game-Identification-es/" class="md-nav__link">
+        Identificación del Juego
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Bonus-Sets-es/" class="md-nav__link">
+        Guía para Sets Bonus
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Achievements-for-ROM-hacks-es/" class="md-nav__link">
+        Logros para ROM hacks
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Console-Specific-Tips-es/" class="md-nav__link">
+        Tips Específicos por Consola
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#supported-consoles" class="md-nav__link">
+    Supported Consoles
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#supported-but-not-validated" class="md-nav__link">
+    Supported But Not Validated
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unsupported-consoles" class="md-nav__link">
+    Unsupported Consoles
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#does-not-have-console-id" class="md-nav__link">
+    Does Not Have Console ID
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#retroachievements-emulator-requirements" class="md-nav__link">
+    RetroAchievements Emulator Requirements:
+  </a>
+  
+    <nav class="md-nav" aria-label="RetroAchievements Emulator Requirements:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#game-identification" class="md-nav__link">
+    Game Identification
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#emulator" class="md-nav__link">
+    Emulator
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#emulated-system" class="md-nav__link">
+    Emulated System
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#achievementsleaderboardsrich-presence" class="md-nav__link">
+    Achievements/Leaderboards/Rich Presence
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#softcore" class="md-nav__link">
+    Softcore
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hardcore" class="md-nav__link">
+    Hardcore
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#after-approval" class="md-nav__link">
+    After approval
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#changelog" class="md-nav__link">
+    Changelog
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://retroachievements.org/wiki-edit-redirect.php?page=/Emulator-Support-and-Issues.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                  <h1>Emulator Support and Issues</h1>
+                
+                <h2 id="supported-consoles">Supported Consoles<a class="headerlink" href="#supported-consoles" title="Permanent link">link</a></h2>
+<table>
+<thead>
+<tr>
+<th>Console ID</th>
+<th>Console Name</th>
+<th>Standalones</th>
+<th>Cores</th>
+<th>RALib Support</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>• Sega Genesis<br>• Mega Drive</td>
+<td>RAGens</td>
+<td>Genesis Plus GX</td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>Nintendo 64</td>
+<td>Project64</td>
+<td>ParaLLEl N64<br>Mupen64Plus-Next</td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>• SNES<br>• Super Famicom<br>• Satellaview<br>• Sufami Turbo</td>
+<td>RASnes9x</td>
+<td>Snes9x</td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td>Game Boy</td>
+<td>RAVBA</td>
+<td>Gambatte<br>Gearboy<br>Mednafen VBA-M</td>
+<td>Yes</td>
+<td>• mGBA <a href="https://github.com/libretro/mgba/issues/188">crashes when unloading</a> the core because RALibretro doesn't implement the camera interface</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Game Boy Advance</td>
+<td>RAVBA</td>
+<td>mGBA<br>Mednafen VBA-M<br>VBA Next</td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td>6</td>
+<td>Game Boy Color</td>
+<td>RAVBA</td>
+<td>Gambatte<br>Gearboy<br>Mednafen VBA-M</td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td>7</td>
+<td>• NES<br>• Famicom<br>• Famicom Disk System</td>
+<td>RANes</td>
+<td>FCEUmm</td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td>8</td>
+<td>• TurboGrafx-16<br>• PC Engine<br>• TurboGrafx-CD<br>• PC Engine CD<br>• SuperGrafx</td>
+<td></td>
+<td>Mednafen PCE-Fast<BR>Mednafen SuperGrafx</td>
+<td>Yes</td>
+<td>• SuperGrafx games only work on the Mednafen SuperGrafx core</td>
+</tr>
+<tr>
+<td>9</td>
+<td>• Mega CD<br>• Sega CD</td>
+<td></td>
+<td>Genesis Plus GX</td>
+<td>Yes</td>
+<td>• Current does not support multi-disc games<br>• Appears to still have unmapped RAM (Ecco 1+2)</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Sega 32X</td>
+<td></td>
+<td>PicoDrive</td>
+<td>Yes</td>
+<td>• Several games are problematic</td>
+</tr>
+<tr>
+<td>11</td>
+<td>• Master System<br>• Mark III</td>
+<td>RAMeka</td>
+<td>Genesis Plus GX</td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td>12</td>
+<td>PlayStation</td>
+<td></td>
+<td>Mednafen PSX<br>PCSX ReARMed</td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td>13</td>
+<td>Atari Lynx</td>
+<td></td>
+<td>Mednafen Handy</td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td>14</td>
+<td>• Neo Geo Pocket<br>• Neo Geo Pocket Color</td>
+<td></td>
+<td>Mednafen Neopop</td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td>15</td>
+<td>Game Gear</td>
+<td>RAMeka</td>
+<td>Genesis Plus GX</td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td>17</td>
+<td>Atari Jaguar</td>
+<td></td>
+<td>Virtual Jaguar</td>
+<td>Yes</td>
+<td>• No savestate support<br> • <a href="https://github.com/libretro/virtualjaguar-libretro/issues/38">Many issues with the emulation</a></td>
+</tr>
+<tr>
+<td>18</td>
+<td>Nintendo DS</td>
+<td></td>
+<td>DeSmuMe</td>
+<td>Needs Work</td>
+<td>• No Microphone Support<br>• No DSi support</td>
+</tr>
+<tr>
+<td>23</td>
+<td>Magnavox Odyssey 2</td>
+<td></td>
+<td>O2EM</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>24</td>
+<td>Pokemon Mini</td>
+<td></td>
+<td>PokeMini</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>25</td>
+<td>Atari 2600</td>
+<td></td>
+<td>Stella</td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td>27</td>
+<td>Arcade</td>
+<td></td>
+<td>FinalBurn Neo</td>
+<td>Yes</td>
+<td>•  Needs Updated Board List<br>• Some boards may not be fully exposed</td>
+</tr>
+<tr>
+<td>28</td>
+<td>Virtual Boy</td>
+<td></td>
+<td>Mednafen VB</td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td>29</td>
+<td>MSX</td>
+<td></td>
+<td>blueMSX</td>
+<td>Yes</td>
+<td>• Hash relies on dsk file not being modified</td>
+</tr>
+<tr>
+<td>33</td>
+<td>SG-1000</td>
+<td>RAMeka</td>
+<td>Genesis Plus GX<br>blueMSX</td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td>38</td>
+<td>Apple II</td>
+<td>RAppleWin</td>
+<td></td>
+<td>No</td>
+<td></td>
+</tr>
+<tr>
+<td>39</td>
+<td>Saturn</td>
+<td></td>
+<td>Mednafen Saturn</td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td>43</td>
+<td>3DO Interactive Multiplayer</td>
+<td></td>
+<td>Opera</td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td>44</td>
+<td>ColecoVision</td>
+<td>RAMeka</td>
+<td>blueMSX</td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td>45</td>
+<td>Intellivision</td>
+<td></td>
+<td>FreeIntv</td>
+<td>Needs Work</td>
+<td>• Controls are much better than they were<br>• Crashes if game is reset<br>• Some crashes that might be related to Intellivoice</td>
+</tr>
+<tr>
+<td>46</td>
+<td>Vectrex</td>
+<td></td>
+<td>VecX</td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td>47</td>
+<td>• PC-6001<br>• PC-8001<br>• PC-8801</td>
+<td>RAQuasi88</td>
+<td>Quasi88</td>
+<td>No</td>
+<td>• Quasi88 crashes RALib <a href="https://github.com/libretro/quasi88-libretro/issues/35">when loading core</a>. Core writes over dsk file when emulator writes to dsk - this breaks hashing</td>
+</tr>
+<tr>
+<td>49</td>
+<td>PC-FX</td>
+<td></td>
+<td>Mednafen PC-FX</td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td>51</td>
+<td>Atari 7800</td>
+<td></td>
+<td>ProSystem</td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td>53</td>
+<td>• WonderSwan<br>• WonderSwan Color</td>
+<td></td>
+<td>Mednafen Cygne</td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td>63</td>
+<td>Watara Supervision</td>
+<td></td>
+<td>Potator</td>
+<td>Yes</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="supported-but-not-validated">Supported But Not Validated<a class="headerlink" href="#supported-but-not-validated" title="Permanent link">link</a></h2>
+<table>
+<thead>
+<tr>
+<th>Console ID</th>
+<th>Console Name</th>
+<th>Standalones</th>
+<th>Cores</th>
+<th>RALib Support</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>56</td>
+<td>Neo Geo CD</td>
+<td></td>
+<td>NeoCD</td>
+<td></td>
+<td>Appears fully functional. Needs hashing method</td>
+</tr>
+</tbody>
+</table>
+<h2 id="unsupported-consoles">Unsupported Consoles<a class="headerlink" href="#unsupported-consoles" title="Permanent link">link</a></h2>
+<table>
+<thead>
+<tr>
+<th>Console ID</th>
+<th>Console Name</th>
+<th>Standalones</th>
+<th>Cores</th>
+<th>RALib Support</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>16</td>
+<td>GameCube</td>
+<td></td>
+<td>Dolphin</td>
+<td>Needs work</td>
+<td>Generates sound but not video in RALibretro</td>
+</tr>
+<tr>
+<td>19</td>
+<td>Wii</td>
+<td></td>
+<td>Dolphin</td>
+<td>Needs work</td>
+<td>Crashes RALib when testing</td>
+</tr>
+<tr>
+<td>20</td>
+<td>Wii U</td>
+<td></td>
+<td></td>
+<td></td>
+<td>Untested</td>
+</tr>
+<tr>
+<td>21</td>
+<td>PlayStation 2</td>
+<td></td>
+<td>Play</td>
+<td></td>
+<td>Low compatibility with most commercial games; black screen with stuttering sound</td>
+</tr>
+<tr>
+<td>22</td>
+<td>Xbox</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>26</td>
+<td>DOS</td>
+<td></td>
+<td></td>
+<td>Needs work</td>
+<td>Needs a reliable hashing method</td>
+</tr>
+<tr>
+<td>30</td>
+<td>Commodore 64</td>
+<td></td>
+<td>vice</td>
+<td>Needs Work</td>
+<td>• Cannot find save disk for games like Bard's Tale and Maniac Mansion<br>• Uncertain how core handles writing to disk - may affect hashing<br>• How to handle multi-disk games that come in a zip <em>without an m3u</em></td>
+</tr>
+<tr>
+<td>31</td>
+<td>ZX81</td>
+<td></td>
+<td>EightyOne</td>
+<td>Needs Work</td>
+<td>• Memory not exposed.</td>
+</tr>
+<tr>
+<td>32</td>
+<td>Oric</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>34</td>
+<td>Vic-20</td>
+<td></td>
+<td></td>
+<td>Needs Work</td>
+<td>Untested with proper BIOS.</td>
+</tr>
+<tr>
+<td>35</td>
+<td>Amiga</td>
+<td></td>
+<td>P-UAE</td>
+<td>Needs Work</td>
+<td>• Seems to run fine if zips are loaded. Memory is not exposed.</td>
+</tr>
+<tr>
+<td>36</td>
+<td>Atari ST</td>
+<td></td>
+<td>Hatari</td>
+<td>Needs Work</td>
+<td>• Memory not exposed. Games seem to run fine.</td>
+</tr>
+<tr>
+<td>37</td>
+<td>Amstrad CPC</td>
+<td></td>
+<td>Cap32</td>
+<td>Needs Work</td>
+<td>• Memory is exposed<br>• Has 'maching-gun' audio bug in several games depending on machine selected.</td>
+</tr>
+<tr>
+<td>37</td>
+<td>Amstrad CPC</td>
+<td></td>
+<td>CrocoDS</td>
+<td>Needs Work</td>
+<td>• Memory is NOT exposed. Seems to run fine. Several games tested.</td>
+</tr>
+<tr>
+<td>40</td>
+<td>Dreamcast</td>
+<td></td>
+<td>flycast</td>
+<td>Needs Work</td>
+<td>runs too fast; crashes when unloading core</td>
+</tr>
+<tr>
+<td>41</td>
+<td>PlayStation Portable</td>
+<td></td>
+<td>PPSSPP</td>
+<td>Needs Work</td>
+<td>• Runs too fast, but speed seems to normalize <a href="https://youtu.be/2xmSzYtFzbU?t=26">when the PSP UI is brought up</a>, or in one case, <a href="https://youtu.be/46Efc1qQewE">the in-game menu</a>. Might need a frame-limiter.<br>• Memory is exposed and shows 32MB of RAM, but the mapping may require some work. In one game, <a href="https://i1.lensdump.com/i/0TyFec.png">the address 0xbe86b4 shows up in the inspector's memory map as 0xbe86b04</a>.</td>
+</tr>
+<tr>
+<td>42</td>
+<td>Philips CD-I</td>
+<td></td>
+<td></td>
+<td></td>
+<td>Untested</td>
+</tr>
+<tr>
+<td>48</td>
+<td>PC-9800</td>
+<td></td>
+<td>np2kai</td>
+<td>Needs Work</td>
+<td>• Memory is not exposed. Ran all 10 games tested.</td>
+</tr>
+<tr>
+<td>50</td>
+<td>Atari 5200</td>
+<td></td>
+<td>Atari800</td>
+<td>Needs Work</td>
+<td>Appears to work fine, but the core itself is a bit of a headache. The BIOS has to be configured within the core (F1 &gt; Emulator Configuration &gt; System ROM settings). Couldn't figure out controls - does Joystick also need to be configured within the core?</td>
+</tr>
+<tr>
+<td>52</td>
+<td>Sharp X68K</td>
+<td></td>
+<td>px68k</td>
+<td></td>
+<td>Untested with proper BIOS</td>
+</tr>
+<tr>
+<td>54</td>
+<td>Cassette Vision</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>55</td>
+<td>Super Cassette Vision</td>
+<td></td>
+<td></td>
+<td></td>
+<td>Currently only playable in MAME, which is unsupported.</td>
+</tr>
+<tr>
+<td>57</td>
+<td>Fairchild Channel-F</td>
+<td></td>
+<td>FreeChaF</td>
+<td></td>
+<td>Exposes memory, but has some control issues</td>
+</tr>
+<tr>
+<td>58</td>
+<td>FM Towns</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>59</td>
+<td>ZX Spectrum</td>
+<td></td>
+<td>FUSE</td>
+<td></td>
+<td>• Requires rcheevos memory map to leverage memory descriptors<br>• Requires ability to map keyboard to port 3 (RALibretro)<br>• Uncertain about save support; cannot seem to insert save disk</td>
+</tr>
+<tr>
+<td>60</td>
+<td>Game &amp; Watch</td>
+<td></td>
+<td>gw</td>
+<td></td>
+<td>Doesn't expose memory</td>
+</tr>
+<tr>
+<td>61</td>
+<td>Nokia N-Gage</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>62</td>
+<td>Nintendo 3DS</td>
+<td></td>
+<td>Citra</td>
+<td></td>
+<td>Core doesn't load at all.</td>
+</tr>
+<tr>
+<td>64</td>
+<td>Sharp X1</td>
+<td></td>
+<td>X1 Millennium</td>
+<td></td>
+<td>• Does not expose memory<br>• <a href="https://github.com/r-type/xmil-libretro/issues/3">Crashes RALibretro</a><br>• Uncertain how core handles writing to disk/tape - may affect hashing</td>
+</tr>
+<tr>
+<td>65</td>
+<td>TIC-80</td>
+<td></td>
+<td>TIC-80</td>
+<td></td>
+<td>Doesn't expose memory correctly (only see 8 bytes)</td>
+</tr>
+<tr>
+<td>66</td>
+<td>Thomson TO8/TO8D</td>
+<td></td>
+<td>Theodore</td>
+<td></td>
+<td>Seems to work. Uncertain how core handles writing to disk/tape - may affect hashing</td>
+</tr>
+</tbody>
+</table>
+<h2 id="does-not-have-console-id">Does Not Have Console ID<a class="headerlink" href="#does-not-have-console-id" title="Permanent link">link</a></h2>
+<table>
+<thead>
+<tr>
+<th>Console ID</th>
+<th>Console Name</th>
+<th>Standalones</th>
+<th>Cores</th>
+<th>RALib Support</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>PocketStation</td>
+<td></td>
+<td>pockystation</td>
+<td></td>
+<td>Core doesn't seem functional even in Retroarch</td>
+</tr>
+<tr>
+<td></td>
+<td>Sega PICO</td>
+<td></td>
+<td>Picodrive</td>
+<td></td>
+<td>Can't be controlled fully, needs controls related to turning pages in attached books</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="retroachievements-emulator-requirements">RetroAchievements Emulator Requirements:<a class="headerlink" href="#retroachievements-emulator-requirements" title="Permanent link">link</a></h2>
+<ul>
+<li>If the emulator does not support a feature, the requirement is automatically met. This is primarily a set of
+  guidelines to ensure the interaction between the emulator and the toolkit is consistent between emulators.</li>
+<li>If the system is supported by RetroArch, explain why a standalone emulator is desirable. RetroArch support is 
+  preferred as it is usable by more players (i.e. not just Windows users), and adding support to RALibRetro for 
+  an additional core is much easier than overhauling an entire emulator.</li>
+</ul>
+<h3 id="game-identification">Game Identification<a class="headerlink" href="#game-identification" title="Permanent link">link</a></h3>
+<ul>
+<li>Hash method documented and approved</li>
+<li>If emulator supports dynamic patching [i.e. ips], hash is calculated after applying patch</li>
+<li>Hash ignores any persistent save data [SRAM]</li>
+<li>Game can be properly identified (RA_OnLoadNewRom and/or RA_IdentifyROM + RA_ActivateGame)</li>
+<li>Unidentified game provides some descriptor [typically filename] to unknown game dialog (RA_InstallSharedFunctions&gt;RA_GetEstimatedGameTitle)</li>
+<li>Unidentified game provides list of known games for console (RA_SetConsoleID - which is usually called by RAIntegration in the emulator registration)</li>
+</ul>
+<h3 id="emulator">Emulator<a class="headerlink" href="#emulator" title="Permanent link">link</a></h3>
+<ul>
+<li>DLL is downloaded if not available (RA_Init - new EmulatorID enum value may be needed in RA_Interface.h)</li>
+<li>RetroAchievements menu is visible (RA_CreatePopupMenu) and functional (RA_InvokeDialog)</li>
+<li>RetroAchievements menu updates when logging in/out (RA_InstallSharedFunctions&gt;RA_RebuildMenu)</li>
+<li>Login dialog displayed on first run or auto-login on future runs (RA_AttemptLogin)</li>
+<li>Title includes logged in user (RA_UpdateAppTitle)</li>
+<li>RALog.txt ends with "Shutdown complete" after closing emulator (RA_Shutdown)</li>
+<li>Full-window overlay can be displayed (RA_SetPaused)</li>
+<li>Full-window overlay can be navigated (RA_NavigateOverlay)</li>
+<li>Full-window overlay navigation uses player's custom controller bindings, not hard-coded inputs.</li>
+<li>Closing the full-window overlay unpauses the emulator (RA_InstallSharedFunctions&gt;RA_CauseUnpause)</li>
+<li>Overlay is still functional when toggling full-screen mode (RA_UpdateHWnd)</li>
+<li>Resetting the emulator disables any active popups/leaderboards (RA_OnReset)</li>
+<li>Performance of emulator (without any debugging windows open) should not be noticeably different than the source emulator at 100% speed</li>
+<li>Emulator must perform at intended framerate on a PC that could have been purchased at a retail store within the last four years.</li>
+</ul>
+<h3 id="emulated-system">Emulated System<a class="headerlink" href="#emulated-system" title="Permanent link">link</a></h3>
+<ul>
+<li>Memory mapping method is documented and approved (RA_InstallMemoryBank)</li>
+<li>Modifying memory affects the game (RA_InstallMemoryBank&gt;pWriter)</li>
+</ul>
+<h3 id="achievementsleaderboardsrich-presence">Achievements/Leaderboards/Rich Presence<a class="headerlink" href="#achievementsleaderboardsrich-presence" title="Permanent link">link</a></h3>
+<ul>
+<li>Achievements can be created</li>
+<li>Achievements trigger (RA_InstallMemoryBank&gt;pReader, RA_DoAchievementsFrame)</li>
+<li>Achievement trigger displays notification</li>
+<li>Achievement can pause emulator [Pause on Reset, Pause on Trigger] (RA_InstallSharedFunctions&gt;RA_CausePause)</li>
+<li>Achievements are not processed when emulator is paused [HitCount for true condition does not increment] (RA_DoAchievementsFrame not called when paused)</li>
+<li>When using frame advance, achievements are only processed when the frame is advanced.</li>
+<li>Changing the current game prompts the user to save modifications (RA_ConfirmLoadNewRom)<br><ul>
+<li>Choosing not to save modifications aborts changing the current game.</li>
+</ul>
+</li>
+<li>Closing the emulator prompts the user to save modifications (RA_ConfirmLoadNewRom)<br><ul>
+<li>Choosing not to save modifications aborts closing the emulator.</li>
+</ul>
+</li>
+<li>Closing the current game prompts the user to save modifications (RA_ConfirmLoadNewRom)<br><ul>
+<li>Choosing not to save modifications aborts closing the current game.</li>
+</ul>
+</li>
+<li>Closing the current game clears the list of achievements for the game (RA_ActivateGame(0))</li>
+</ul>
+<h3 id="softcore">Softcore<a class="headerlink" href="#softcore" title="Permanent link">link</a></h3>
+<ul>
+<li>Save states can be created</li>
+<li>Save states can be loaded</li>
+<li>HitCounts persist with save state (RA_OnSaveState, RA_OnLoadState)</li>
+<li>Speed may be adjusted above 100% [framerate higher than normal]</li>
+<li>Speed may be adjusted below 100% [framerate lower than normal]</li>
+<li>Fast-forward [removing frame limiter] is allowed</li>
+<li>Rewind is allowed</li>
+<li>Frame advance is allowed<br><ul>
+<li>Overlay should not be displayed when using frame advance (don't call RA_SetPaused)</li>
+</ul>
+</li>
+<li>Recording is allowed</li>
+<li>Recording playback is allowed</li>
+<li>Switching to Hardcore resets the emulator (RA_InstallSharedFunctions&gt;RA_ResetEmulation)</li>
+<li>Switching to Hardcore resets the emulator speed to 100%</li>
+<li>Switching to Hardcore closes any emulator specific tools for viewing/modifying memory</li>
+<li>Switching to Hardcore disables any enabled cheats</li>
+</ul>
+<h3 id="hardcore">Hardcore<a class="headerlink" href="#hardcore" title="Permanent link">link</a></h3>
+<ul>
+<li>Save states can be created</li>
+<li>Save states cannot be loaded [prompt to switch to softcore (RA_WarnDisableHardcore)]</li>
+<li>Speed may be adjusted above 100%</li>
+<li>Speed cannot be adjusted below 100%</li>
+<li>Fast-forward is allowed</li>
+<li>Rewind is not allowed</li>
+<li>Frame advance is not allowed</li>
+<li>Recording is allowed</li>
+<li>Recording playback is not allowed</li>
+<li>Switching to Softcore does not reset the emulator</li>
+<li>Emulator specific tools for viewing/modifying memory are not allowed [prompt to switch to softcore optional]</li>
+<li>Emulator specific tools for supporting cheats are not allowed [prompt to switch to softcore optional]</li>
+<li>Ensure any features not allowed in hardcore are disabled both from menu items and hotkeys</li>
+</ul>
+<h3 id="after-approval">After approval<a class="headerlink" href="#after-approval" title="Permanent link">link</a></h3>
+<ul>
+<li>Version generated from git tag</li>
+<li>Zip file needs to be built - should contain emulator, default Overlay directory, and any supplemental files needed by the emulator</li>
+<li>Backend (to be done by the RAWeb team)<br><ul>
+<li>Add the emulator's console ID as a "valid" console, so new achievements can be promoted to the Core set (RAWeb:lib/database/game.php&gt;isValidConsoleId).<br></li>
+<li>Add the emulator's enum (get the number from RAInterface.h and add it in RAWeb:src/Emulators.php)<br></li>
+<li>dorequest.php&gt;latestclient needs to map to LatestXXXVersion.html file when it receives either emulator ID or console ID.<br></li>
+<li>Add link to the new system game list in RAWeb:lib/dynrenderer.php&gt;RenderToolbar.<br></li>
+<li>Add an entry for the emulator in RAWeb:public/reportissue.php, so people can choose it when opening tickets.<br></li>
+<li>Upload zip file to the server<br></li>
+<li>Create the LatestXXXVersion.html page.<br></li>
+<li>Add a link to the zip file and show the latest emulator's version in RAWeb:public/download.php <br></li>
+</ul>
+</li>
+</ul>
+<h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">link</a></h2>
+<p>Last 10 changes on this page:</p>
+<ul>
+<li><code>[2021-04-20 13:52] Jamiras:</code> update atari 5200 assessment</li>
+<li><code>[2021-04-03 09:31] Jamiras:</code> add test results for Supervision, TO8, X1, and TIC-80</li>
+<li><code>[2021-03-31 01:59] televandalist:</code> Includes recent console ID additions. Moves Intellivision to the supported group. Adds New Emulator Checklist.</li>
+<li><code>[2021-03-24 05:31] televandalist:</code> Correction: Tomson TO8 -&gt; Thomson TO8</li>
+<li><code>[2020-12-05 05:05] televandalist:</code> Quick update to FB Neo issues.</li>
+<li><code>[2020-11-17 22:03] Jamiras:</code> how to handle multi-disk c64 games without an m3u?</li>
+<li><code>[2020-11-17 22:06] televandalist:</code> Changed "PC-8000/PC-8800" to PC-6001, PC-8001, and PC-8801. Made a few minor format fixes.</li>
+<li><code>[2020-11-17 21:57] televandalist:</code> Fixed the instances of italicized text where they were supposed to be bullet points. Changed all instances of * to • since I think the tables were keeping asterisks from becoming bullet points.</li>
+<li><code>[2020-11-08 17:10] Jamiras:</code> Updated Emulator Support and Issues (markdown)</li>
+<li><code>[2020-10-14 08:17] televandalist:</code> Updates to PlayStation Portable</li>
+</ul>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        <a href="../Game-Identification/" class="md-footer__link md-footer__link--prev" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Game Identification
+            </div>
+          </div>
+        </a>
+      
+      
+        <a href="../Bonus-Sets/" class="md-footer__link md-footer__link--next" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Bonus Set Guide
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+  <div class="md-footer-social">
+    
+      
+      
+        
+        
+      
+      <a href="https://retroachievements.org/" target="_blank" rel="noopener" title="retroachievements.org" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M336.5 160C322 70.7 287.8 8 248 8s-74 62.7-88.5 152h177zM152 256c0 22.2 1.2 43.5 3.3 64h185.3c2.1-20.5 3.3-41.8 3.3-64s-1.2-43.5-3.3-64H155.3c-2.1 20.5-3.3 41.8-3.3 64zm324.7-96c-28.6-67.9-86.5-120.4-158-141.6 24.4 33.8 41.2 84.7 50 141.6h108zM177.2 18.4C105.8 39.6 47.8 92.1 19.3 160h108c8.7-56.9 25.5-107.8 49.9-141.6zM487.4 192H372.7c2.1 21 3.3 42.5 3.3 64s-1.2 43-3.3 64h114.6c5.5-20.5 8.6-41.8 8.6-64s-3.1-43.5-8.5-64zM120 256c0-21.5 1.2-43 3.3-64H8.6C3.2 212.5 0 233.8 0 256s3.2 43.5 8.6 64h114.6c-2-21-3.2-42.5-3.2-64zm39.5 96c14.5 89.3 48.7 152 88.5 152s74-62.7 88.5-152h-177zm159.3 141.6c71.4-21.2 129.4-73.7 158-141.6h-108c-8.8 56.9-25.6 107.8-50 141.6zM19.3 352c28.6 67.9 86.5 120.4 158 141.6-24.4-33.8-41.2-84.7-50-141.6h-108z"/></svg>
+      </a>
+    
+      
+      
+        
+        
+      
+      <a href="https://discord.gg/dq2E4hE" target="_blank" rel="noopener" title="discord.gg" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M297.216 243.2c0 15.616-11.52 28.416-26.112 28.416-14.336 0-26.112-12.8-26.112-28.416s11.52-28.416 26.112-28.416c14.592 0 26.112 12.8 26.112 28.416zm-119.552-28.416c-14.592 0-26.112 12.8-26.112 28.416s11.776 28.416 26.112 28.416c14.592 0 26.112-12.8 26.112-28.416.256-15.616-11.52-28.416-26.112-28.416zM448 52.736V512c-64.494-56.994-43.868-38.128-118.784-107.776l13.568 47.36H52.48C23.552 451.584 0 428.032 0 398.848V52.736C0 23.552 23.552 0 52.48 0h343.04C424.448 0 448 23.552 448 52.736zm-72.96 242.688c0-82.432-36.864-149.248-36.864-149.248-36.864-27.648-71.936-26.88-71.936-26.88l-3.584 4.096c43.52 13.312 63.744 32.512 63.744 32.512-60.811-33.329-132.244-33.335-191.232-7.424-9.472 4.352-15.104 7.424-15.104 7.424s21.248-20.224 67.328-33.536l-2.56-3.072s-35.072-.768-71.936 26.88c0 0-36.864 66.816-36.864 149.248 0 0 21.504 37.12 78.08 38.912 0 0 9.472-11.52 17.152-21.248-32.512-9.728-44.8-30.208-44.8-30.208 3.766 2.636 9.976 6.053 10.496 6.4 43.21 24.198 104.588 32.126 159.744 8.96 8.96-3.328 18.944-8.192 29.44-15.104 0 0-12.8 20.992-46.336 30.464 7.68 9.728 16.896 20.736 16.896 20.736 56.576-1.792 78.336-38.912 78.336-38.912z"/></svg>
+      </a>
+    
+      
+      
+        
+        
+      
+      <a href="https://github.com/RetroAchievements" target="_blank" rel="noopener" title="github.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+      </a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.instant"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../assets/javascripts/workers/search.fe42c31b.min.js", "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.4ea5477f.min.js"></script>
+      
+    
+  </body>
+</html>

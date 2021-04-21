@@ -1,0 +1,3109 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="RetroAchievements.org Documentation Project">
+      
+      
+      
+      
+        <link rel="canonical" href="https://docs.retroachievements.org/Achievement-Design-pt_BR/">
+      
+      <link rel="icon" href="../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.2">
+    
+    
+      
+        <title>Design de Conquistas - RADocs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.6f955dcd.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ef6f36e2.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#4051b5">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="indigo" data-md-color-accent="amber">
+  
+    
+    <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#design-de-conquistas" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="RADocs" class="md-header__button md-logo" aria-label="RADocs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path d="M480.07 96H160a160 160 0 1 0 114.24 272h91.52A160 160 0 1 0 480.07 96zM248 268a12 12 0 0 1-12 12h-52v52a12 12 0 0 1-12 12h-24a12 12 0 0 1-12-12v-52H84a12 12 0 0 1-12-12v-24a12 12 0 0 1 12-12h52v-52a12 12 0 0 1 12-12h24a12 12 0 0 1 12 12v52h52a12 12 0 0 1 12 12zm216 76a40 40 0 1 1 40-40 40 40 0 0 1-40 40zm64-96a40 40 0 1 1 40-40 40 40 0 0 1-40 40z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            RADocs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Design de Conquistas
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/RetroAchievements/docs/wiki/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    RetroAchievements/docs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        General
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Developer-docs/" class="md-tabs__link">
+        Developers
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Home-pt_BR/" class="md-tabs__link md-tabs__link--active">
+        Portugues
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Home-es/" class="md-tabs__link">
+        Español
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="RADocs" class="md-nav__button md-logo" aria-label="RADocs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path d="M480.07 96H160a160 160 0 1 0 114.24 272h91.52A160 160 0 1 0 480.07 96zM248 268a12 12 0 0 1-12 12h-52v52a12 12 0 0 1-12 12h-24a12 12 0 0 1-12-12v-52H84a12 12 0 0 1-12-12v-24a12 12 0 0 1 12-12h52v-52a12 12 0 0 1 12-12h24a12 12 0 0 1 12 12v52h52a12 12 0 0 1 12 12zm216 76a40 40 0 1 1 40-40 40 40 0 0 1-40 40zm64-96a40 40 0 1 1 40-40 40 40 0 0 1-40 40z"/></svg>
+
+    </a>
+    RADocs
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/RetroAchievements/docs/wiki/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    RetroAchievements/docs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" >
+      
+      <label class="md-nav__link" for="__nav_1">
+        General
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="General" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          General
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RetroAchievements-Manifesto/" class="md-nav__link">
+        RetroAchievements Manifesto
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Users-Code-of-Conduct/" class="md-nav__link">
+        Users Code of Conduct
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FAQ/" class="md-nav__link">
+        FAQ
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Global-Leaderboard-and-Achievement-Hunting-Rules/" class="md-nav__link">
+        Global Leaderboard and Achievement Hunting Rules
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../My-game-is-not-loading-achievements/" class="md-nav__link">
+        My game is not loading achievements
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../How-to-contribute-if-you-are-not-a-developer/" class="md-nav__link">
+        How to contribute if you are not a developer
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../System-X-wen/" class="md-nav__link">
+        System X wen
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Why-you-shouldn%27t-use-the-load-state-feature/" class="md-nav__link">
+        Why you shouldn't use the load state feature
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A-message-for-Achievement-Hunters-and-Completionists-about-revisions/" class="md-nav__link">
+        A message for Achievement Hunters and Completionists about revisions
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Multi-Disc-Games-Tutorial/" class="md-nav__link">
+        Multi-Disc Games Tutorial
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../How-to-configure-OBS-Studio-to-see-the-popups/" class="md-nav__link">
+        How to configure OBS Studio to see the popups
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RABot%2C-the-RA-Discord-Robot/" class="md-nav__link">
+        RABot, the RA Discord Robot
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Badge-and-Icon-Creation/" class="md-nav__link">
+        Badge and Icon Creation
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_15" type="checkbox" id="__nav_1_15" >
+      
+      <label class="md-nav__link" for="__nav_1_15">
+        RAEmulators
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="RAEmulators" data-md-level="2">
+        <label class="md-nav__title" for="__nav_1_15">
+          <span class="md-nav__icon md-icon"></span>
+          RAEmulators
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RAQUASI88/" class="md-nav__link">
+        RAQUASI88
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RALibretro/" class="md-nav__link">
+        RALibretro
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Downloads/" class="md-nav__link">
+        Downloads
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Free-Games/" class="md-nav__link">
+        Free Games
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Useful-Links/" class="md-nav__link">
+        Useful Links
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Contributing-with-the-docs/" class="md-nav__link">
+        Contributing with the docs
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../About-Us/" class="md-nav__link">
+        About Us
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      <label class="md-nav__link" for="__nav_2">
+        Developers
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Developers" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Developers
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Developer-docs/" class="md-nav__link">
+        Intro
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Developers-Code-of-Conduct/" class="md-nav__link">
+        Developer's Code of Conduct
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../How-to-Become-an-Achievement-Developer/" class="md-nav__link">
+        How to Become an Achievement Developer
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Getting-Started-as-an-Achievement-Developer/" class="md-nav__link">
+        Getting Started as an Achievement Developer
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../New-achievement-set-checklist/" class="md-nav__link">
+        New achievement set checklist
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Achievement-Scoring/" class="md-nav__link">
+        Achievement Scoring
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Memory-Inspector-Overview/" class="md-nav__link">
+        Memory Inspector Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_8" type="checkbox" id="__nav_2_8" >
+      
+      <label class="md-nav__link" for="__nav_2_8">
+        Achievement Logic Features
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Achievement Logic Features" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_8">
+          <span class="md-nav__icon md-icon"></span>
+          Achievement Logic Features
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Achievement-Logic-Features/" class="md-nav__link">
+        Intro
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Hit-Counts/" class="md-nav__link">
+        Hit Counts
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Delta-Values/" class="md-nav__link">
+        Delta Values
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Prior-Values/" class="md-nav__link">
+        Prior Values
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ResetIf-Flag/" class="md-nav__link">
+        ResetIf Flag
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PauseIf-Flag/" class="md-nav__link">
+        PauseIf Flag
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AndNext-and-OrNext-Flags/" class="md-nav__link">
+        AndNext and OrNext Flags
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AddSource-Flag/" class="md-nav__link">
+        AddSource Flag
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SubSource-Flag/" class="md-nav__link">
+        SubSource Flag
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AddHits-Flag/" class="md-nav__link">
+        AddHits Flag
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AddAddress-Flag/" class="md-nav__link">
+        AddAddress Flag
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Measured-Flag/" class="md-nav__link">
+        Measured Flag
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../BitCount-Size/" class="md-nav__link">
+        BitCount Size
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Combining-Flags/" class="md-nav__link">
+        Combining Flags
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Alt-Groups/" class="md-nav__link">
+        Alt Groups
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Minimum-Required-Versions-for-Logic-Features/" class="md-nav__link">
+        Minimum Required Versions for Logic Features
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_9" type="checkbox" id="__nav_2_9" >
+      
+      <label class="md-nav__link" for="__nav_2_9">
+        Real Examples
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Real Examples" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_9">
+          <span class="md-nav__icon md-icon"></span>
+          Real Examples
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Real-Examples/" class="md-nav__link">
+        Intro
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Using-Hit-Counts-as-a-Timer/" class="md-nav__link">
+        Using Hit Counts as a Timer
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Using-Delta-Values-and-Hit-Counts-to-Detect-an-Increment/" class="md-nav__link">
+        Using Delta Values and Hit Counts to Detect an Increment
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Simple-Example-of-How-to-Avoid-Load-State-Abusing/" class="md-nav__link">
+        Simple Example of How to Avoid Load State Abusing
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Circumvent-the-Problem-of-a-Counter-Incrementing-Twice-in-the-Same-Frame/" class="md-nav__link">
+        Circumvent the Problem of a Counter Incrementing Twice in the Same Frame
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Creating-a-Timer-with-ResetIf-Hits-based-on-the-Speed-of-the-Game/" class="md-nav__link">
+        Creating a Timer with ResetIf Hits based on the Speed of the Game
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Using-Add-Source-and-Deltas-for-Collectables-or-Similar-Achievements/" class="md-nav__link">
+        Using Add Source and Deltas for Collectables and Similar Achievements
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Achievement-Templates/" class="md-nav__link">
+        Achievement Templates
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Tips-and-Tricks/" class="md-nav__link">
+        Tips and Tricks
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Difficulty-Scale-and-Balance/" class="md-nav__link">
+        Difficulty Scale and Balance
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Achievement-Design/" class="md-nav__link">
+        Achievement Design
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Set-Development-Roadmap/" class="md-nav__link">
+        Set Development Roadmap
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Achievement-Set-Revisions/" class="md-nav__link">
+        Achievement Set Revisions
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Badge-and-Icon-Creation/" class="md-nav__link">
+        Badge and Icon Creation
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Leaderboards/" class="md-nav__link">
+        Leaderboards
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Rich-Presence/" class="md-nav__link">
+        Rich Presence
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Working-with-the-Right-ROM/" class="md-nav__link">
+        Working with the Right ROM
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Game-Identification/" class="md-nav__link">
+        Game Identification
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Emulator-Support-and-Issues/" class="md-nav__link">
+        Emulator Support and Issues
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Bonus-Sets/" class="md-nav__link">
+        Bonus Set Guide
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Achievements-for-ROM-hacks/" class="md-nav__link">
+        Achievements for ROM hacks
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Console-Specific-Tips/" class="md-nav__link">
+        Console Specific Tips
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      <label class="md-nav__link" for="__nav_3">
+        Portugues
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Portugues" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Portugues
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Home-pt_BR/" class="md-nav__link">
+        Introdução
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" >
+      
+      <label class="md-nav__link" for="__nav_3_2">
+        Geral
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Geral" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Geral
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RetroAchievements-Manifesto-pt_BR/" class="md-nav__link">
+        Manifesto RetroAchievements
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Users-Code-of-Conduct-pt_BR/" class="md-nav__link">
+        Código de Conduta do Usuário
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FAQ-pt_BR/" class="md-nav__link">
+        FAQ - Perguntas Frequentes
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../How-to-contribute-if-you-are-not-a-developer-pt_BR/" class="md-nav__link">
+        Como contribuir se você não é um desenvolvedor
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Multi-Disc-Games-Tutorial-pt_BR/" class="md-nav__link">
+        Tutorial para Jogos Multi-Discos
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" type="checkbox" id="__nav_3_3" checked>
+      
+      <label class="md-nav__link" for="__nav_3_3">
+        Desenvolvedores
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Desenvolvedores" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          Desenvolvedores
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Developer-docs-pt_BR/" class="md-nav__link">
+        Introdução
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Getting-Started-as-an-Achievement-Developer-pt_BR/" class="md-nav__link">
+        Primeiros Passos como um Desenvolvedor de Conquistas
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Achievement-Logic-Features-pt_BR/" class="md-nav__link">
+        Recursos de Lógica para Achievements
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3_4" type="checkbox" id="__nav_3_3_4" >
+      
+      <label class="md-nav__link" for="__nav_3_3_4">
+        Exemplos Reais
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Exemplos Reais" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_3_4">
+          <span class="md-nav__icon md-icon"></span>
+          Exemplos Reais
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Real-Examples-pt_BR/" class="md-nav__link">
+        Introdução
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Using-Hit-Counts-and-ResetIf-pt_BR/" class="md-nav__link">
+        Usando Hit Counts e ResetIf
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Using-Delta-Values-and-ResetIf-pt_BR/" class="md-nav__link">
+        Usando Delta Values e ResetIf
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Simple-Example-of-How-to-Avoid-Load-State-Abusing-pt_BR/" class="md-nav__link">
+        Simples Exemplo de como Evitar Abuso de Load State
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Tips-and-Tricks-pt_BR/" class="md-nav__link">
+        Dicas e Truques
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Console-Specific-Tips-pt_BR/" class="md-nav__link">
+        Dicas Específicas de Console
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Achievement-Templates-pt_BR/" class="md-nav__link">
+        Modelos de Achievement
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Difficulty-Scale-and-Balance-pt_BR/" class="md-nav__link">
+        Escala de Dificuldade e Equilíbrio
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Set-Development-Roadmap-pt_BR/" class="md-nav__link">
+        Roteiro de Desenvolvimento de um Set de Conquistas
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Badge-and-Icon-Creation-pt_BR/" class="md-nav__link">
+        Criação de Ícones e Emblemas
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Leaderboards-pt_BR/" class="md-nav__link">
+        Leaderboards
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Rich-Presence-pt_BR/" class="md-nav__link">
+        Rich Presence
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Design de Conquistas
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Design de Conquistas
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#conquistas-baseadas-em-progresso" class="md-nav__link">
+    Conquistas Baseadas em Progresso
+  </a>
+  
+    <nav class="md-nav" aria-label="Conquistas Baseadas em Progresso">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#progresso-simples" class="md-nav__link">
+    Progresso Simples
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#progresso-baseado-na-historia" class="md-nav__link">
+    Progresso Baseado na história:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#progressocoletagem" class="md-nav__link">
+    Progresso/Coletagem
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pros-e-contras-em-progresso" class="md-nav__link">
+    Prós e Contras em Progresso
+  </a>
+  
+    <nav class="md-nav" aria-label="Prós e Contras em Progresso">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pros" class="md-nav__link">
+    Prós
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contras" class="md-nav__link">
+    Contras
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sidequestconquistas-opcionais" class="md-nav__link">
+    Sidequest/Conquistas Opcionais
+  </a>
+  
+    <nav class="md-nav" aria-label="Sidequest/Conquistas Opcionais">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sidequests" class="md-nav__link">
+    Sidequests
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conquitas-opcionais" class="md-nav__link">
+    Conquitas Opcionais
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pros-e-contras-de-sidequestsopcionais" class="md-nav__link">
+    Prós e Contras de Sidequests/Opcionais
+  </a>
+  
+    <nav class="md-nav" aria-label="Prós e Contras de Sidequests/Opcionais">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pros_1" class="md-nav__link">
+    Prós
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contras_1" class="md-nav__link">
+    Contras
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conquistas-baseadas-em-coletas" class="md-nav__link">
+    Conquistas baseadas em coletas
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conquistas-divertidas" class="md-nav__link">
+    Conquistas divertidas
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#desafios" class="md-nav__link">
+    Desafios
+  </a>
+  
+    <nav class="md-nav" aria-label="Desafios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#desafios-de-speedrun" class="md-nav__link">
+    Desafios de Speedrun
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#desafios-de-limitacao" class="md-nav__link">
+    Desafios de Limitação
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#desafios-de-pontuacao" class="md-nav__link">
+    Desafios de pontuação
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pros-e-contras-dos-desafios" class="md-nav__link">
+    Prós e Contras dos desafios
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fontes-externas" class="md-nav__link">
+    Fontes externas
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#changelog" class="md-nav__link">
+    Changelog
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      <label class="md-nav__link" for="__nav_4">
+        Español
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Español" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Español
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Home-es/" class="md-nav__link">
+        Introducción
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" >
+      
+      <label class="md-nav__link" for="__nav_4_2">
+        General
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="General" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          General
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RetroAchievements-Manifesto-es/" class="md-nav__link">
+        Manifesto RetroAchievements
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Users-Code-of-Conduct-es/" class="md-nav__link">
+        Código de Conducta del Usuario
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FAQ-es/" class="md-nav__link">
+        FAQ - Preguntas Frecuentes
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Global-Leaderboard-and-Achievement-Hunting-Rules-es/" class="md-nav__link">
+        Tablas Globales y Reglas para la Casería de Logros
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../My-game-is-not-loading-achievements-es/" class="md-nav__link">
+        Mi juego no esta cargando los logros
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../How-to-contribute-if-you-are-not-a-developer-es/" class="md-nav__link">
+        Como contribuir si no eres un desarrollador
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Why-you-shouldn%27t-use-the-load-state-feature-es/" class="md-nav__link">
+        Por que no deberías utilizar la función de cargar estado
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Contributing-with-the-docs-es/" class="md-nav__link">
+        Contribuyendo con los documentos
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../How-RA-Documentation-Works-es/" class="md-nav__link">
+        Como funciona la Documentación de RA
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Downloads-es/" class="md-nav__link">
+        Descargas
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3" type="checkbox" id="__nav_4_3" >
+      
+      <label class="md-nav__link" for="__nav_4_3">
+        Desarrolladores
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Desarrolladores" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_3">
+          <span class="md-nav__icon md-icon"></span>
+          Desarrolladores
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Developer-docs-es/" class="md-nav__link">
+        Intro
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Developers-Code-of-Conduct-es/" class="md-nav__link">
+        Código de Conducta del Desarrollador
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../How-to-Become-an-Achievement-Developer-es/" class="md-nav__link">
+        Como convertirme en un Desarrollador de Logros
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Getting-Started-as-an-Achievement-Developer-es/" class="md-nav__link">
+        Primeros pasos como un Desarrollador de Logros
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Memory-Inspector-Overview-es/" class="md-nav__link">
+        Un vistazo al Inspector de Memoria
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3_6" type="checkbox" id="__nav_4_3_6" >
+      
+      <label class="md-nav__link" for="__nav_4_3_6">
+        Características en la Logica de un Logro
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Características en la Logica de un Logro" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_3_6">
+          <span class="md-nav__icon md-icon"></span>
+          Características en la Logica de un Logro
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Achievement-Logic-Features-es/" class="md-nav__link">
+        Intro
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Hit-Counts-es/" class="md-nav__link">
+        Contador de Golpes (Hit Counts)
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Delta-Values-es/" class="md-nav__link">
+        Valores Delta
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ResetIf-Flag-es/" class="md-nav__link">
+        Bandera ResetIf
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PauseIf-Flag-es/" class="md-nav__link">
+        Bandera PauseIf
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AddSource-Flag-es/" class="md-nav__link">
+        Bandera AddSource
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SubSource-Flag-es/" class="md-nav__link">
+        Bandera SubSource
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AddHits-Flag-es/" class="md-nav__link">
+        Bandera AddHits
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Combining-Flags-es/" class="md-nav__link">
+        Combinando Banderas
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Alt-Groups-es/" class="md-nav__link">
+        Alt Groups
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Minimum-Required-Versions-for-Logic-Features-es/" class="md-nav__link">
+        Versiones Mínimas Requeridas para Funciones en la Lógica
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3_7" type="checkbox" id="__nav_4_3_7" >
+      
+      <label class="md-nav__link" for="__nav_4_3_7">
+        Ejemplos Reales
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Ejemplos Reales" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_3_7">
+          <span class="md-nav__icon md-icon"></span>
+          Ejemplos Reales
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Real-Examples-es/" class="md-nav__link">
+        Intro
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Using-Hit-Counts-as-a-Timer-es/" class="md-nav__link">
+        Utilizando Hit Counts como un Temporizador
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Using-Delta-Values-and-Hit-Counts-to-Detect-an-Increment-es/" class="md-nav__link">
+        Utilizando Valores Delta y Hit Counts para Detectar un Incremento
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Simple-Example-of-How-to-Avoid-Load-State-Abusing-es/" class="md-nav__link">
+        Un Ejemplo Simple en como evitar el Abuso de Estados de Guardado
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Circumvent-the-Problem-of-a-Counter-Incrementing-Twice-in-the-Same-Frame-es/" class="md-nav__link">
+        Evitar el Problema de que un Contador se Incremente Dos Veces en el Mismo Frame
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Creating-a-Timer-with-ResetIf-Hits-based-on-the-Speed-of-the-Game-es/" class="md-nav__link">
+        Creando un Temporizador con un ResetIf Hits basándote en la Velocidad de un Juego
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Achievement-Templates-es/" class="md-nav__link">
+        Plantillas para Logros
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Tips-and-Tricks-es/" class="md-nav__link">
+        Tips y Trucos
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Difficulty-Scale-and-Balance-es/" class="md-nav__link">
+        Escala de Dificultad y Balance
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Achievement-Design-es/" class="md-nav__link">
+        Diseño de Logros
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Set-Development-Roadmap-es/" class="md-nav__link">
+        Mapa de Desarrollo de Set
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Achievement-Set-Revisions-es/" class="md-nav__link">
+        Revisiones en Set de Logros
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Badge-and-Icon-Creation-es/" class="md-nav__link">
+        Creación de Iconos y Badges
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Leaderboards-es/" class="md-nav__link">
+        Tablas de Clasificación
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Rich-Presence-es/" class="md-nav__link">
+        Rich Presence
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Working-with-the-Right-ROM-es/" class="md-nav__link">
+        Trabajando con el ROM apropiado
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Game-Identification-es/" class="md-nav__link">
+        Identificación del Juego
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Bonus-Sets-es/" class="md-nav__link">
+        Guía para Sets Bonus
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Achievements-for-ROM-hacks-es/" class="md-nav__link">
+        Logros para ROM hacks
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Console-Specific-Tips-es/" class="md-nav__link">
+        Tips Específicos por Consola
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#conquistas-baseadas-em-progresso" class="md-nav__link">
+    Conquistas Baseadas em Progresso
+  </a>
+  
+    <nav class="md-nav" aria-label="Conquistas Baseadas em Progresso">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#progresso-simples" class="md-nav__link">
+    Progresso Simples
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#progresso-baseado-na-historia" class="md-nav__link">
+    Progresso Baseado na história:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#progressocoletagem" class="md-nav__link">
+    Progresso/Coletagem
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pros-e-contras-em-progresso" class="md-nav__link">
+    Prós e Contras em Progresso
+  </a>
+  
+    <nav class="md-nav" aria-label="Prós e Contras em Progresso">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pros" class="md-nav__link">
+    Prós
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contras" class="md-nav__link">
+    Contras
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sidequestconquistas-opcionais" class="md-nav__link">
+    Sidequest/Conquistas Opcionais
+  </a>
+  
+    <nav class="md-nav" aria-label="Sidequest/Conquistas Opcionais">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sidequests" class="md-nav__link">
+    Sidequests
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conquitas-opcionais" class="md-nav__link">
+    Conquitas Opcionais
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pros-e-contras-de-sidequestsopcionais" class="md-nav__link">
+    Prós e Contras de Sidequests/Opcionais
+  </a>
+  
+    <nav class="md-nav" aria-label="Prós e Contras de Sidequests/Opcionais">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pros_1" class="md-nav__link">
+    Prós
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contras_1" class="md-nav__link">
+    Contras
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conquistas-baseadas-em-coletas" class="md-nav__link">
+    Conquistas baseadas em coletas
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conquistas-divertidas" class="md-nav__link">
+    Conquistas divertidas
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#desafios" class="md-nav__link">
+    Desafios
+  </a>
+  
+    <nav class="md-nav" aria-label="Desafios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#desafios-de-speedrun" class="md-nav__link">
+    Desafios de Speedrun
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#desafios-de-limitacao" class="md-nav__link">
+    Desafios de Limitação
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#desafios-de-pontuacao" class="md-nav__link">
+    Desafios de pontuação
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pros-e-contras-dos-desafios" class="md-nav__link">
+    Prós e Contras dos desafios
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fontes-externas" class="md-nav__link">
+    Fontes externas
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#changelog" class="md-nav__link">
+    Changelog
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://retroachievements.org/wiki-edit-redirect.php?page=/Achievement-Design-pt_BR.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <h1 id="design-de-conquistas">Design de Conquistas<a class="headerlink" href="#design-de-conquistas" title="Permanent link">link</a></h1>
+<p><strong>Link para o texto em inglês:</strong> <a href="Achievement-Design">Achievement Design</a></p>
+<p>Este é um guia de como pensar sobre e desenvolver boas conquistas. Não o lado técnico, mas o lado conceitual.</p>
+<p>Este conteudo é um resumo do que foi <a href="http://retroachievements.org/viewtopic.php?t=1235">originalmente escrito pelo usuário cirellio em um forum</a>.  <code>texto em inglês</code></p>
+<h2 id="conquistas-baseadas-em-progresso">Conquistas Baseadas em Progresso<a class="headerlink" href="#conquistas-baseadas-em-progresso" title="Permanent link">link</a></h2>
+<p>Há 3 tipos de conquistas baseadas em progresso: progresso simples, progresso baseado na história, e conquistas baseadas em progresso/coletagem.</p>
+<h3 id="progresso-simples">Progresso Simples<a class="headerlink" href="#progresso-simples" title="Permanent link">link</a></h3>
+<p>Conquistas baseadas em Progresso são geralmente mais simples, especialmente se o jogo que você está fazendo não passa de fases lineares. Ou não tem muita coisa acontecendo na história. Neste caso, vamos dar uma olhadas em alguns exemplos BONS e RUINS disto:</p>
+<ul>
+<li>Bom: Clear Stage 1. (Conclua o 1 estagio)</li>
+<li>Ruim: Reach Stage 2. (Chegue o 2 estagio)</li>
+</ul>
+<p>É preciso um pouco mais de trabalho para codificar uma conquista em que o jogador precisa concluir a fase, em vez de simplesmente chegar a próxima. Mas também é muito mais satisfatório para o jogador, e tem muito mais um olhar profissional. Também é <strong>menos suscetível a problemas com jogadores que carregam save games ou savestates para ganhar conquistas em massa</strong> <code>Nota do tradutor: Em outras palavras: Evitar Cheats</code></p>
+<ul>
+<li>Bom: Complete o jogo.</li>
+<li>Ruim: Inicie o jogo.</li>
+</ul>
+<p>Enquanto as conquistas baseadas em progresso são frequentemente brindes, geralmente é concordado aqui que uma conquista para começar o jogo é um pouco fácil demais, e não é nada memorável para o jogador. É apenas uma formalidade. E finalizando o jogo, no entanto, é frequentemente a parte do jogo mais memorável para um jogador, e completar um jogo é definitivamente uma conquista em si. É uma boa prática fazer essas conquistas como "Derrote o ultimo chefe/fase e conclua o jogo"</p>
+<ul>
+<li>Bom: Conclua as fases temáticas de gelo, ou Conclua as cinco primeiras fases, ou Conclua as dez primeiras fases.</li>
+<li>Ruim: Complete a fase 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11-200 (todas as conquistas separadas)</li>
+</ul>
+<p>Uma das piores coisas que você pode fazer é criar spams de conquistas. Jogos de Puzzles são notáveis por esses tipos de problemas, porque as fases são curtas e existem centenas delas ou mais. Como um resultado, o feed da página principal fica com muitas micro-atualizações, que "spama" as conquistas das outras pessoas para baixo e pra fora da página principal rapidamente. A maneira de se mostrar mais profissional nessa questão é ampliar um pouco mais as conquistas, em grupos de fases. Por exemplo, se os estágios 1-10 são todas temáticas de fogo, e as fases 11-20 são temáticas de espaço sideral, você pode criar conquistas ao redor desses temas. Seja criativo.</p>
+<h3 id="progresso-baseado-na-historia">Progresso Baseado na história:<a class="headerlink" href="#progresso-baseado-na-historia" title="Permanent link">link</a></h3>
+<p>Os momentos mais memoráveis na história dos jogos muitas vezes não estão relacionados à coleção de itens ou sidequests, mas para cenas específicas relacionadas à história</p>
+<p><strong>Exemplos:</strong>
+- O primeiro encontro com Pyramid Head na série Silent Hill
+- Encontrar a verdade sobre Darth Revan em Knights of the Old Republic
+- Encontrar o que irá acontecer no futuro em Chrono Trigger
+- Lançar a vaca em Earthworm Jim.
+- Praticamente qualquer morte de personagem.</p>
+<p>A coisa que você tem que ter cuidado extra é com os spoilers. Se você pegar uma conquista baseada em progresso que tem um spoiler, contacte um desenvolvedor sobre isso. E os desenvolvedores, por favor, seja receptivo quando vier críticas construtivas! Além disso, o número e até a porcentagem deles irão variar de jogo para jogo--E depende muito de como o jogo é baseado na história.</p>
+<h3 id="progressocoletagem">Progresso/Coletagem<a class="headerlink" href="#progressocoletagem" title="Permanent link">link</a></h3>
+<p>Progresso/Coletagem é um híbrido comum. Não apenas em você coletar um item, mas também inicia uma cena memorável (e obrigatória).</p>
+<p><strong>Exemplos</strong>
+- Obter a Master Sword em Link to the Past, que sustenta a maldição em Lost Woods
+- Encontrar a espada na praia em Link's Awakening, na primeira cena em que a coruja sábia fala com você.
+- Pegar o seu Pokemon inicial, que acontece durante uma cena inicial, mas é um "ritual de passagem" para a maioria dos jogadores.</p>
+<p>Conquistas nesta categoria híbrida podem oferecer muito mais satisfação porquer eles são Conquistas nesta categoria híbrida geralmente são mais satisfatórios pois eles desempenham um papel duplo. O jogador não está apenas pegando um item, mas também assistindo uma cena memorável e farturando uma conquista, tudo de uma vez. Que enxurrada de endorfina!</p>
+<h3 id="pros-e-contras-em-progresso">Prós e Contras em Progresso<a class="headerlink" href="#pros-e-contras-em-progresso" title="Permanent link">link</a></h3>
+<p>Conquistas em Progresso são garantidos ao jogador em uma jogada normal. Então, por que tê-los?</p>
+<h4 id="pros">Prós<a class="headerlink" href="#pros" title="Permanent link">link</a></h4>
+<ul>
+<li>
+<p>Um jogador merece os pontos por jogar! Faça eles! Lembre, um monte de pessoas estarão jogando esses jogos pela primeira vez, e muitos jogos são um pouco dificeis para se zerar. Por que não devemos recompensar os jogadores por uma boa e normal jogada?</p>
+</li>
+<li>
+<p>Prêmios de progressão periódicos ajudam a encorajar os jogadores a completar um jogo.</p>
+</li>
+<li>
+<p>Alguns jogadores são mais casuais e não pretendem fazer muito mais do que zerar jogos neste site. Nem todo mundo sente a necessidade de platinar todos os jogos no modo Hardcore. Muitos ficam perfeitamente felizes em conseguir qualquer conquista que possam ter durante uma jogada normal, e não há nada de errado com isso.</p>
+</li>
+<li>
+<p>Algumas cenas são tão memoráveis que merecem conquistas próprias! As pessoas que cresceram com esses jogos e os amam, tem o costume de procurar essas cenas em listas de conquistas, e isso pode apenas aquecer seu coração quando elas perceberem que isso foi reconhecido.</p>
+</li>
+<li>
+<p>Conquistas de progresso ajudam outras pessoas no site a avaliar a distância de um jogador em um jogo, parecido com o <a href="https://github.com/RetroAchievements/docs/wiki/Rich-Presence-pt_BR">Estado de Presença</a>. Nós podemos "soltar uma linha" para o jogador e dizer: "Boa sorte!" porque sabemos que a próxima parte é bem complicada. Encoraja a comunidade a interagir.</p>
+</li>
+<li>
+<p>A ordem importa! Conquistas em Progresso podem nos dizer muito sobre o progresso apenas pela ordem que elas ocorram. Se você ativar aquela conquista de boss opcional e conseguiu um milhão de dolares, então você está fazendo todas as sidequests, isso é muito menos impressionante do que se você conseguir tirá-lo bem antes do meio do jogo. Em outras palavras, conquistas em progresso nos permite mostrar um pouco! Podemos mostrar ao mundo que podemos vencer o chefe final antes de chegarmos ao nível 10, ou que podemos finalizar o Expert Mode antes de ir primeiro no Facil e Normal. <strong>Pode até revelar se usamos falhas ou truques para pular certas partes do jogo</strong>. Então, como você pode ver, conquistas em progresso tem grande SINERGIA com outros tipos de conquistas.</p>
+</li>
+<li>
+<p>Esses tipos de conquistas são as mais faceis de codificar e são geralmente livres de erros.</p>
+</li>
+</ul>
+<h4 id="contras">Contras<a class="headerlink" href="#contras" title="Permanent link">link</a></h4>
+<ul>
+<li>
+<p>Muitas Conquistas em Progresso podem saturar um jogo com 'brindes', e isto é uma Coisa Muito Ruim.</p>
+</li>
+<li>
+<p>Se todo o seu jogo não é nada alem do que esses tipos de conquistas, entao é apenas uma jogatina chata para os jogadores. Chegue a fase 2, Chegue a fase 3, Chegue a fase 4, Complete o Jogo. Estas as uma grande 'base' para você começar a adicionar conquistas de outras categorias, mas <strong>não deixe que listas apenas com conquistas em progresso</strong> se você pode ajudar com isso. Outra coisa além disso você apenas estará recompensando jogadores por fazer coisa que eles já fizeram um milhão de vezes antes.</p>
+</li>
+</ul>
+<h2 id="sidequestconquistas-opcionais">Sidequest/Conquistas Opcionais<a class="headerlink" href="#sidequestconquistas-opcionais" title="Permanent link">link</a></h2>
+<p>Os jogos antigos, por si só, oferecem pouco ou nenhum incentivo para zerar um bonus, além de que é algo para fazer em um dia chuvoso depois de você ter zerado o jogo. Jogos antigos não tinham conectividade com a Internet. E eles não tinham aspectos sociais além de 2 jogadores, e talvez dizendo a seus amigos da escola que você vencesse alguma coisa. Mas agora, com o Retroachievements.org, nos podemos mostrar seus troféis antigos (mesmo que isso nos obrigue a refazer o que provavelmente já fizemos há muitos anos). Estes troféis são emblemas de honra. Você pode olhar as conquistas de outros membros e começar a entender o quão longe eles foram, o quão hábeis eles são. Junto com isso vem o respeito dos outros membros. Nós socializamos, nós parabenizamos uns aos outros por um trabalho bem feito. E nós somos uma boa compania.</p>
+<h3 id="sidequests">Sidequests<a class="headerlink" href="#sidequests" title="Permanent link">link</a></h3>
+<p>Muitas vezes há coisas que o jogador pode fazer que estão confinados às regras do jogo, mas não são necessárias para completá-lo. Em outras palavras, um desafio contruido para o jogo pelos desenvolvedores originais do jogo. Geralmente elas são divertidos, mas merecem ser ganhos porque elas requerem trabalho duro e pesistencia para ganhar. Você tem que caminhar em uma corda bamba bem entre se jogadores dedicados são propensos a fazer algo, vs. se o objetivo é estupido. As pessoas terão visões diferentes sobre isso, então fortaleça-se.</p>
+<p>Muitas vezes, esses tipos de conquistas são até Easter Eggs ou coisas que o jogador nunca soube que existiam em toda a sua vida! Muitos jogadores adoram esses tipos de conquistas. Provavelmente porque eles acabam conhecendo algo novo  sobre um jogo que eles cresceram jogando, ou talvez por perceber que aquele segredo do jogo que "só ele conhece" está sendo suportado aqui. <strong>É muito importante para nós desenvolvedores conhecer MUITO BEM o jogo antes de criar um set de conquistas.</strong></p>
+<p><strong>Exemplos de Sidequests:</strong></p>
+<ul>
+<li>Entregando caudas para o Coletor de Caudas em Final Fantasy IV.</li>
+<li>Encontrar ao dono do Item Insignificante em Earthbound.</li>
+<li>Entregar o "Jerky" para o Rei em Guardia Castle.</li>
+<li>Fazer a sidequest do Anju em Majora's Mask.</li>
+<li>Aprender sobre o passado de Wrex em Mass Effect</li>
+<li>Escoltar Uma pessoa muito Importante em Flashback: The Quest for Identity.</li>
+<li>Descobrir uma sala secreta.</li>
+</ul>
+<p>Sidequests são mais frequentemente encontrados em RPGs, mas especialmente nesses dias, sidequests são encontrandas em quase todos os gêneros. Mantenha seus olhos abertos, jogos de plataforma pode tem uma ou três sidequests. Os jogos da série Kirby por exemplo, tem muitas salas e áreas escondidas. Muitas vezes, sidequests acabam com "ganhando um item" no qual acaba sendo um hibrido: Sidequest/Coletagem.</p>
+<h3 id="conquitas-opcionais">Conquitas Opcionais<a class="headerlink" href="#conquitas-opcionais" title="Permanent link">link</a></h3>
+<ul>
+<li>Chefes Opcionais</li>
+<li>Concluir o desafio de uma dungeon (Que é um híbrido de Sidequest)</li>
+<li>Completar o Modo Expert (que é um híbrido de progressão)</li>
+<li>Completar um desafio secreto.</li>
+<li>Conseguir a exceção de de conseguir pegar um item de um monstro. (Pegar um item raro)</li>
+<li>Completar o jogo com um personagem opcional.</li>
+<li>Conseguir uma pontuação alta</li>
+<li>Conseguir coisas que apenas são desbloqueadas em uma segunda jogatina</li>
+<li>Modos de jogos que são apenas desbloqueadas em multiplas jogatinas</li>
+<li>Ver finais opcionais</li>
+<li>Colocar códigos para deixar o jogo mais dificil (Passwords e senhas)</li>
+</ul>
+<p>Estes são os criadores do jogo esperando que você goste de seu jogo o suficiente para continuar voltando para mais, mesmo depois que esses créditos terminarem. Eles estão tentando recompensar o jogador por completar seu jogo e criar alguma forma de satisfazer uma segunda jogatina. Se os criadores do jogo tem problemas de fazer essas coisas como parte integral do jogo, nos como desenvolvedores de conquistas devemos reconhecer esses desafios e criar conquistas apropriadas para pelo menos alguns deles.</p>
+<p>Chrono Trigger, Chrono Cross, and Star Ocean: The Second Story são famosos por isso. De fato, muitos jogos fazem isso. Se você não tem certeza se o seu jogo tem modos extras ou desafios, tenha certeza de fazer alguma pesquisa e chegar alguns FAQs. Ou perguntar na nossa comunidade, muitos de nós somos experts nos jogos que são suportados aqui.</p>
+<h3 id="pros-e-contras-de-sidequestsopcionais">Prós e Contras de Sidequests/Opcionais<a class="headerlink" href="#pros-e-contras-de-sidequestsopcionais" title="Permanent link">link</a></h3>
+<p>Conquistas de Sidequests/Opcional fazem complementos fantásticos para Conquistas de Progresso.</p>
+<h4 id="pros_1">Prós<a class="headerlink" href="#pros_1" title="Permanent link">link</a></h4>
+<ul>
+<li>
+<p>Isto é uma mão-na-roda de fazer conquistas. As chances são, uma boa parte das conquistas que você irá fazer serão desta categoria. Todos os jogos tem coisas opcionais para se fazer. Como coletar todas as moedas em uma fase! Ganhar 9 vidas! Criar conquistas com esse tipo de conteúdo é facil, e recompensar o jogar pela sua dedicação.</p>
+</li>
+<li>
+<p>Criadores de jogos amam jogadores apreciativos. Eles adoram quando os jogadores se incomodam em procurar fundo em seus jogos, apreciam seu trabalho duro, caso contrário, não veríamos coisas 'divertidas' escondidas em jogos como Easter Eggs, cenas bonus, etc. Se um criador de jogos recompensa os jogadores por fazer isso, por nós não? Nos desenvolvedores devemos reconhecer que o jogador foi além.</p>
+</li>
+<li>
+<p>Os jogadores adoram contar aos seus amigos quando encontram algo incomum e fora do comum em um jogo. Neste site, eles podem mostrar aos seus amigos que eles realmente mataram o 'sapo amarelo' raramente visto no pântano, ou encontar o portal para a 'dimensão misteriosa'. Se nos incluimos essas curiosidade em nossa lista de conquistas, nós mostramos aos jogadores que estamos "no conhecimento" que cria confiança de que podemos guiá-los competentemente através do jogo.</p>
+</li>
+<li>
+<p>Conquistas de Sidequests/Opcionais dão aos jogadores algo para se esforçar por depois que eles zerarem o jogo.</p>
+</li>
+<li>
+<p>Esses tipos de conquistas podem frequentemente serem ganhados em qualquer tempo e não estão em um cronograma programado. Jogadores sentem uma corrida extra de endorfinas quando aparece uma conquista que eles não esperavam, mas foi conquistada.</p>
+</li>
+<li>
+<p>Esses tipos de conquistas são geralmente faceis de fazer, segundo, apenas para conquistas de estilo de progresso</p>
+</li>
+</ul>
+<h4 id="contras_1">Contras<a class="headerlink" href="#contras_1" title="Permanent link">link</a></h4>
+<ul>
+<li>
+<p>Alguns jogadores não se importam em explorar além de uma jogatina típica do que ofecere, então uma alta porcentagem desses tipos de conquistas em um jogo pode deixar o jogador abaixo da recompensa. (Este tipo de jogador é um pouco raro em um site concentrado em conquistas.)</p>
+</li>
+<li>
+<p>Algumas pessoas podem sentir um desafio específico muito difícil, mesmo se é algo que os desenvolvedores do jogo original incluiram no jogo para os jogadores conseguirem.</p>
+</li>
+<li>
+<p>Quando você cria uma conquista de Sidequest/Opcional para, digamos, fugir de 999 batalhas (ou outras conquistas de maximizar o status), você corre o risco de que as pessoas neste site não sintam que essa conquista em particular ofereça um desafio e é apenas um grind (grind é quando se há repetição de uma parte para se ganhar experiência). Conquistas como essas podem muito bem acabar sendo envias para o "Não-oficial", a menos que sirvam a um segundo propósito como em Final Fantasy V quando correr de batalhas pode melhor uma arma chamada 'Chicken Knife'. Isto tem SINERGIA com o jogo, ao contrário de criar uma conquista baseada no aumento de nível que não tem utilidade.</p>
+</li>
+</ul>
+<h2 id="conquistas-baseadas-em-coletas">Conquistas baseadas em coletas<a class="headerlink" href="#conquistas-baseadas-em-coletas" title="Permanent link">link</a></h2>
+<p>A maioria das conquistas baseadas em coleta são opcionais, a menos que os itens em si sejam MacGuffins, que, nesse caso, cairiam diretamente em Progressão / Coleção.</p>
+<p><strong>Exemplos:</strong></p>
+<ul>
+<li>Encontrar os chapéus de Mickey escondidos no cenário para obter 1 vida em Aladdin (Mega Drive).</li>
+<li>Encontrar itens excepcionalmente bem escondidos</li>
+<li>Bestiários.</li>
+<li>Desbloquear um personagem opcional.</li>
+<li>Maximizar dinheiro / kills / status.</li>
+<li>Encontrar todas as maneiras diferentes de morrer em jogos como Prince of Persia ou Shadowgate.</li>
+<li>Abrindo todos os baús do tesouro em um jogo / encontrando cada powerup.</li>
+<li>Todos os itens / Coletando 99 ou 255 (etc.) de um item.</li>
+<li>Capturando todos os Pokemon (qualquer coleção de monstros, na verdade.)</li>
+</ul>
+<p>Se o jogo acompanhar uma estatística, o desenvolvedor do jogo está praticamente desafiando você a maximizá-lo. Agora, você pode ser esse tipo de jogador, e você pode não ser. Você tem que perguntar a si mesmo, como um desenvolvedor, se os outros jogadores provavelmente obterão 9999 mortes de um inimigo, mesmo que você não o faça. As vantagens disso são que as pessoas que normalmente não fazem isso sempre têm algo para voltar e trabalhar quando sentem vontade de jogar novamente. A desvantagem é que outros jogadores que normalmente não irão tão longe e talvez não o faça, mas também sentem que precisam PLATINAR rapidamente todos os jogos (raros de encontrar), vão reclamar. Se você receber reclamações suficientes, você pode querer reduzir 9999 algo mais razoável, como 500. Se ninguém está se divertindo com uma conquista, não é no espírito de jogar ou fazer uma conquista.</p>
+<p>Você tem que usar seu melhor julgamento aqui e pensar no que o jogador mais gosta. Como regra geral, é melhor ter algumas conquistas paralelos / opcionais do que nenhuma. Mas com um pouco de esforço extra, essas conquistas podem tornar sua lista muito memorável.</p>
+<p>Em seguida, é hora de arregaçar as mangas como desenvolvedores e ser REALMENTE criativos quando os próprios desenvolvedores desafiam o jogador além das regras do jogo.</p>
+<h2 id="conquistas-divertidas">Conquistas divertidas<a class="headerlink" href="#conquistas-divertidas" title="Permanent link">link</a></h2>
+<p>Este tipo de conquistas geralmente vale apenas alguns pontos, mas eles ainda são divertidos</p>
+<p><strong>Exemplos de diversão:</strong></p>
+<ul>
+<li>Deixando o relógio marcar 99:59 em Valkyrie Profile.</li>
+<li>Fundos interativos, como cutucar o cadáver pendurado no estágio 1 de Castlevania: Bloodlines.</li>
+<li>Cozinhando o hamster no microondas em Maniac Mansion.</li>
+<li>Assistindo o apocalipse em Majora's Mask.</li>
+<li>Encontrando John Romero em Doom 2.</li>
+<li>Às vezes, criadores de jogos adicionam easter eggs (segredos) divertidos. Para entreter o jogador com 'e se isso estivesse ali?'. Mais uma vez, é nosso trabalho, como desenvolvedores, reconhecê-los e apoiá-los o máximo que pudermos.</li>
+</ul>
+<h2 id="desafios">Desafios<a class="headerlink" href="#desafios" title="Permanent link">link</a></h2>
+<p>Uma coisa que você deve lembrar sobre os jogadores retrô - e os jogos que eles jogam - é que a maioria de nós já jogou esses jogos um milhão de vezes antes. Esta é a mesma velha música e dança para a maioria de nós, e muitas vezes precisamos de motivação para fazê-lo novamente. Alguns de nós podem terminar o Contra sem perder uma única vida. Bem, agora é a nossa chance de provar isso!</p>
+<p>Quero dizer, pense nisso: antes deste site, a única maneira de provar que você pode fazer uma corrida impecável de Contra era convidar um amigo, sentar e mostrar a ele, ou descobrir software de gravação e fazer um vídeo no YouTube. Mas mesmo assim, muitos desses vídeos são manipulados para se parecer com jogos perfeitos. Este site, no entanto, tem o modo Hardcore, que ajuda a indicar que ninguém está trapaceando.</p>
+<p>Você pode ter Conquistas progressivas e Sidequest / Conquistas Opcionais, mas se você quiser criar uma lista de conquistas que seja realmente ótima, você precisa de pelo menos algumas Conquistas de Desafio. Tente pensar em todos os jogos que você jogou aqui neste site. Quais são algumas das realizações mais memoráveis? Eu quase posso garantir que eles eram Conquistas de Desafio. Existem exceções à regra, é claro, mas o jogador típico não vai se lembrar com carinho, Concluir a fase 2-6', ou 'Chegar ao nivel 30'. Eles são mais propensos a se lembrar com carinho de realizações que fizeram de seus jogatinas uma experiência única, como ...</p>
+<ul>
+<li>passar o jogo inteiro sem nunca pegar um powerup ou moeda</li>
+<li>derrotar um chefe sem ser atingido</li>
+<li>terminar um estágio sem perder uma vida</li>
+</ul>
+<p>Isso é o que torna este site tão especial, e o que faz das conquistas algo mais do que apenas vencer um jogo.</p>
+<p>Mesmo os críticos mais contundentes que odeiam a idéia de realizações podem dizer: "Bem, exceto por este. Esse foi bom". E eu garanto que UM exemplo de que eles estão falando é uma conquista de desafio, algo que desafiou o jogador além do próprio jogo.</p>
+<p>Um bom desenvolvedor de realizações manterá seus olhos abertos, sua inteligência sobre eles e seus sentidos afiados ao desenvolver um jogo, procurando por desafios bons e incomuns. Eles podem perceber algo no jogo que é um feito difícil.</p>
+<h3 id="desafios-de-speedrun">Desafios de Speedrun<a class="headerlink" href="#desafios-de-speedrun" title="Permanent link">link</a></h3>
+<p>Os timers apresentam uma pressão adicional que os jogadores podem nunca ter sentido antes enquanto jogam seus jogos favoritos. Poucas coisas fazem o coração bombear mais do que um relógio imponente. Adicione um elemento de temporizador, e um jogo que anteriormente era tão fácil que eles poderiam vencê-lo de olhos vendados poderia de repente ser transformado no maior desafio de jogo de suas vidas.</p>
+<p><strong>Exemplos de desafios do Speedrun:</strong></p>
+<ul>
+<li>Concluindo um jogo em menos de uma hora.</li>
+<li>Limpando um estágio específico em menos de três minutos.</li>
+<li>Passe o temporizador em um certo número de segundos.</li>
+<li>Mate 30 morcegos durante a sequência de fuga.</li>
+<li>Colete 99 moedas bônus antes que a tela bônus desapareça.</li>
+<li>Vá do ponto A ao ponto B antes que o dia mude para a noite.</li>
+<li>Leaderboard - Complete o jogo com o menor tempo possível.</li>
+<li>Leaderboard - Complete um determinado estágio com o menor tempo possível.</li>
+</ul>
+<p>Um desenvolvedor pode querer ir ao YouTube ou Twitch e ver o quão rápido as pessoas estão terminando um jogo (E, por favor, ignore o TAS - "Tool Assisted Speedruns"). Alguns corredores profissionais de velocidade são tão rápidos que o jogador típico não terá a menor chance de competir, mas você deve ser capaz de encontrar um ponto médio entre o melhor tempo dele e o seu. E se você não consegue descobrir um bom momento para desafiar os jogadores aqui, é para isso que os Leaderboards são - Transforme isso em uma competição! Na verdade, alguns de seus favoritos speed-runners podem vir a este site e colocar seus tempos.</p>
+<p>Você saberá quando você está enfrentando uma conquista de pressão quando as palmas das mãos estão suando e você se vê nervosamente olhando para o cronômetro. Como eu disse antes, nada grita: "Atenção!" mais alto que um cronômetro, especialmente quando os desenvolvedores começam a tecer esse tipo de conquista com OUTROS tipos de conquistas (e até placares de líderes) durante uma parte cronometrada de um jogo. Os Desafios Temporizadores têm uma quantidade insana de sinergia com outros tipos de conquistas.</p>
+<h3 id="desafios-de-limitacao">Desafios de Limitação<a class="headerlink" href="#desafios-de-limitacao" title="Permanent link">link</a></h3>
+<p><strong>Exemplos de Desafios de Limitação:</strong></p>
+<ul>
+<li>Limpar uma batalha ou até mesmo um jogo inteiro com todos os personagens de uma classe específica. (Um exemplo famoso disso é terminar o Final Fantasy original com um grupo de White Mages.)</li>
+<li>Derrote um chefe final sem equipamento.</li>
+<li>Conclua um estágio sem nunca saltar.</li>
+<li>Resolva um quebra-cabeça em apenas dois movimentos.</li>
+<li>One-hit KOs.</li>
+<li>Jogos de baixo nível (LLGs).</li>
+<li>Nenhuma conquista de sucesso.</li>
+<li>Nunca aperte em determinado botão durante um desafio.</li>
+<li>Nunca perca a invencibilidade através de uma etapa inteira do Mario 3 encontrando estrelas suficientes.</li>
+<li>Derrote um certo inimigo sem usar um certo movimento.</li>
+<li>Alcançando Ganon em Legend of Zelda, sem espada.</li>
+<li>Derrote um certo inimigo SOMENTE usando um certo movimento.</li>
+<li>Tropeçar no caminho através de um labirinto, enquanto bêbado / confuso.</li>
+<li>Limpe o jogo com uma doença no status.</li>
+</ul>
+<p>Os sites da comunidade construídos em torno de determinados jogos são um recurso fantástico para esses tipos de realizações. Eles terão uma boa idéia sobre o que é possível e impossível, e provavelmente escreveram perguntas frequentes discutindo maneiras alternativas e desafiadoras de jogar o jogo inteiro.</p>
+<p>Muitas vezes, porém, não haverá comunidade. Não há perguntas frequentes. Nenhum quadro de mensagens. E talvez nem vídeos úteis. Nesses casos, você precisará ser uma pessoa de ideias para criar maneiras novas e interessantes de desafiar o jogador. Esteja ciente de que esse tipo de conquista requer muita prática, tempo e experiência para criar.</p>
+<p>O jeito aqui é ser criativo! E lembre-se de mantê-lo divertido!</p>
+<h3 id="desafios-de-pontuacao">Desafios de pontuação<a class="headerlink" href="#desafios-de-pontuacao" title="Permanent link">link</a></h3>
+<p><strong>Exemplos de desafios de pontuação:</strong></p>
+<ul>
+<li>Completando um jogo ou nível com a menor pontuação possível.</li>
+<li>Complete um minigame com uma pontuação perfeita (não apenas no topo do ranking da CPU).</li>
+<li>Leaderboard - Complete o jogo com a maior pontuação / mais dinheiro / melhor contagem de mortes / etc. possível.</li>
+<li>Leaderboard - Complete um estagio com a maior pontuação / mais dinheiro / melhor contagem de mortes / etc. possível.</li>
+</ul>
+<h3 id="pros-e-contras-dos-desafios">Prós e Contras dos desafios<a class="headerlink" href="#pros-e-contras-dos-desafios" title="Permanent link">link</a></h3>
+<p>As conquistas de desafio são a sua chance de mostrar aos jogadores como jogar seus jogos favoritos de maneiras diferentes, únicas e até alucinantes. Embora essas conquistas possam dar vida a um conjunto de realizações que, de outra forma, é monótono, você geralmente quer que apenas um pequeno grupo delas esteja na sua lista final.</p>
+<p><strong>Prós</strong></p>
+<ul>
+<li>
+<p>Jogadores hardcore amam deixar suas marcas nesses tipos de conquistas.</p>
+</li>
+<li>
+<p>Se alguns jogadores são muito hardcore, você pode encontrar um meio feliz implementando o Leaderboards, que satisfaz tanto os caçadores de conquistas ocasionais quanto os jogadores hardcore de uma só vez.</p>
+</li>
+<li>
+<p>Esta é a sua chance de ser muito criativo e criar novos desafios para jogadores que eles nunca esperaram. Isso pode ser uma surpresa agradável e realmente tornar suas listas memoráveis.</p>
+</li>
+</ul>
+<p><strong>Contras</strong></p>
+<ul>
+<li>
+<p>Esses tipos de realizações exigem uma boa quantidade de criatividade, embora haja muitas maneiras de pesquisar, maneiras incomuns de jogar, observando coisas como corridas de velocidade.</p>
+</li>
+<li>
+<p>Pode exigir uma pesquisa profunda.</p>
+</li>
+<li>
+<p>Estes podem ser notoriamente difíceis de codificar. Eles exigem que você faça muitas anotações de código, faça toneladas de observações mecânicas do jogo e, muitas vezes, eles exigem testes de erros antes mesmo de funcionar. Na verdade, você pode nem estar pronto para enfrentar conquistas como essa até ter alguns jogos em seu currículo com um conjunto de conquistas básicas. Felizmente, as Conquistas do Desafio sempre podem ser adicionadas mais tarde.</p>
+</li>
+</ul>
+<h2 id="fontes-externas">Fontes externas<a class="headerlink" href="#fontes-externas" title="Permanent link">link</a></h2>
+<ul>
+<li><a href="http://www.voidcn.com/article/p-gmokauqn-bgh.html">Best practices achievement creation guide</a> escrito por Jeff Sullivan, gerente de contas de desenvolvedor do XNA Developer Connection (XDC) sobre Conquistas do XBox 360. <code>texto em inglês</code></li>
+<li><a href="https://gamedevelopment.tutsplus.com/articles/make-them-work-for-it-designing-achievements-for-your-games--gamedev-3371">Make them Work for it </a>, um guia de design de conquistas escrito por Darran Jamieson em 1º de janeiro de 2013. <code>texto em inglês</code></li>
+<li><a href="http://gamestudies.org/1101/articles/jakobsson">The Achievement Machine: Understanding Xbox 360 Achievements in Gaming Practices</a> - por Mikael Jakobsson <code>texto em inglês</code></li>
+</ul>
+<h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">link</a></h2>
+<p>Last 10 changes on this page:</p>
+<ul>
+<li><code>[2018-05-25 12:10] meleu:</code> Updated Achievement Design pt_BR (markdown)</li>
+<li><code>[2018-04-01 00:18] KingDice001:</code> Updated Achievement Design pt_BR (markdown)</li>
+<li><code>[2018-03-31 15:03] meleu:</code> Updated Achievement Design pt_BR (markdown)</li>
+<li><code>[2018-03-30 22:15] 7Mogami7:</code> Updated Achievement Design pt_BR (markdown)</li>
+<li><code>[2018-03-30 22:08] 7Mogami7:</code> Updated Achievement Design pt_BR (markdown)</li>
+<li><code>[2018-03-30 21:25] 7Mogami7:</code> Updated Achievement Design pt_BR (markdown)</li>
+<li><code>[2018-03-30 21:16] 7Mogami7:</code> Updated Achievement Design pt_BR (markdown)</li>
+<li><code>[2018-03-30 20:59] 7Mogami7:</code> Updated Achievement Design pt_BR (markdown)</li>
+<li><code>[2018-03-30 18:50] KingDice001:</code> Updated Achievement Design pt_BR (markdown)</li>
+<li><code>[2018-03-30 18:47] KingDice001:</code> Updated Achievement Design pt_BR (markdown)</li>
+</ul>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        <a href="../Rich-Presence-pt_BR/" class="md-footer__link md-footer__link--prev" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Rich Presence
+            </div>
+          </div>
+        </a>
+      
+      
+        <a href="../Home-es/" class="md-footer__link md-footer__link--next" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Introducción
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+  <div class="md-footer-social">
+    
+      
+      
+        
+        
+      
+      <a href="https://retroachievements.org/" target="_blank" rel="noopener" title="retroachievements.org" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M336.5 160C322 70.7 287.8 8 248 8s-74 62.7-88.5 152h177zM152 256c0 22.2 1.2 43.5 3.3 64h185.3c2.1-20.5 3.3-41.8 3.3-64s-1.2-43.5-3.3-64H155.3c-2.1 20.5-3.3 41.8-3.3 64zm324.7-96c-28.6-67.9-86.5-120.4-158-141.6 24.4 33.8 41.2 84.7 50 141.6h108zM177.2 18.4C105.8 39.6 47.8 92.1 19.3 160h108c8.7-56.9 25.5-107.8 49.9-141.6zM487.4 192H372.7c2.1 21 3.3 42.5 3.3 64s-1.2 43-3.3 64h114.6c5.5-20.5 8.6-41.8 8.6-64s-3.1-43.5-8.5-64zM120 256c0-21.5 1.2-43 3.3-64H8.6C3.2 212.5 0 233.8 0 256s3.2 43.5 8.6 64h114.6c-2-21-3.2-42.5-3.2-64zm39.5 96c14.5 89.3 48.7 152 88.5 152s74-62.7 88.5-152h-177zm159.3 141.6c71.4-21.2 129.4-73.7 158-141.6h-108c-8.8 56.9-25.6 107.8-50 141.6zM19.3 352c28.6 67.9 86.5 120.4 158 141.6-24.4-33.8-41.2-84.7-50-141.6h-108z"/></svg>
+      </a>
+    
+      
+      
+        
+        
+      
+      <a href="https://discord.gg/dq2E4hE" target="_blank" rel="noopener" title="discord.gg" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M297.216 243.2c0 15.616-11.52 28.416-26.112 28.416-14.336 0-26.112-12.8-26.112-28.416s11.52-28.416 26.112-28.416c14.592 0 26.112 12.8 26.112 28.416zm-119.552-28.416c-14.592 0-26.112 12.8-26.112 28.416s11.776 28.416 26.112 28.416c14.592 0 26.112-12.8 26.112-28.416.256-15.616-11.52-28.416-26.112-28.416zM448 52.736V512c-64.494-56.994-43.868-38.128-118.784-107.776l13.568 47.36H52.48C23.552 451.584 0 428.032 0 398.848V52.736C0 23.552 23.552 0 52.48 0h343.04C424.448 0 448 23.552 448 52.736zm-72.96 242.688c0-82.432-36.864-149.248-36.864-149.248-36.864-27.648-71.936-26.88-71.936-26.88l-3.584 4.096c43.52 13.312 63.744 32.512 63.744 32.512-60.811-33.329-132.244-33.335-191.232-7.424-9.472 4.352-15.104 7.424-15.104 7.424s21.248-20.224 67.328-33.536l-2.56-3.072s-35.072-.768-71.936 26.88c0 0-36.864 66.816-36.864 149.248 0 0 21.504 37.12 78.08 38.912 0 0 9.472-11.52 17.152-21.248-32.512-9.728-44.8-30.208-44.8-30.208 3.766 2.636 9.976 6.053 10.496 6.4 43.21 24.198 104.588 32.126 159.744 8.96 8.96-3.328 18.944-8.192 29.44-15.104 0 0-12.8 20.992-46.336 30.464 7.68 9.728 16.896 20.736 16.896 20.736 56.576-1.792 78.336-38.912 78.336-38.912z"/></svg>
+      </a>
+    
+      
+      
+        
+        
+      
+      <a href="https://github.com/RetroAchievements" target="_blank" rel="noopener" title="github.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+      </a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.instant"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../assets/javascripts/workers/search.fe42c31b.min.js", "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.4ea5477f.min.js"></script>
+      
+    
+  </body>
+</html>
