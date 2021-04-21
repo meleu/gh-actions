@@ -1,7 +1,6 @@
-name: GitHub Actions Demo
+name: Deploy RADocs
 
-on: [push]
-#on: workflow_dispatch
+on: workflow_dispatch
 
 jobs:
   Deploy-Documentation-Site:
@@ -9,9 +8,6 @@ jobs:
     steps:
       - name: Check out repository code
         uses: actions/checkout@v2
-
       - name: Running the deploy script
-        run: |
-          bash generate-docs.sh
+        run: bash generate-docs.sh
 
-      - run: echo "🍏 This job's status is ${{ job.status }}."
