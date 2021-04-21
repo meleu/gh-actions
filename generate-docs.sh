@@ -78,7 +78,7 @@ function main() {
     cp -R img docs.wiki/
 
     echo "--- Generating the custom mkdocs.yml..."
-    cp mkdocs.yml.template mkdocs.yml || exit_error "Failed to copy \"mkdocs.yml\"."
+    cp template.mkdocs.yml mkdocs.yml || exit_error "Failed to copy \"mkdocs.yml\"."
     generate_nav_section >> mkdocs.yml || exit_error "Failed to generate \"nav:\" section."
     echo "--- Done!"
     echo
