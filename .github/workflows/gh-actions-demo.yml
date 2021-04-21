@@ -7,20 +7,11 @@ jobs:
   Deploy-Documentation-Site:
     runs-on: ubuntu-latest
     steps:
-      - name: Clone the wiki and prepare
-        run: |
-          git clone https://github.com/RetroAchievements/docs.wiki.git
-          cd docs.wiki
-          ln -sf Home.md index.md
-          echo -e "\n\n\n## Changelog\n\nLast 10 changes on this page:\n" >> Home.md
-          git log -n 10 --date=format:"%Y-%m-%d %H:%M" --pretty=format:"- \`[%cd] %cn:\` %s" Home.md >> Home.md
-          echo 'docs.retroachievements.org' > CNAME
-          cd ..
-
       - name: Check out repository code
         uses: actions/checkout@v2
 
-      - name: List files in the repository
+      - name: Running the deploy script
         run: |
-          ls docs.wiki
+          bash generate-docs.sh
+
       - run: echo "🍏 This job's status is ${{ job.status }}."
