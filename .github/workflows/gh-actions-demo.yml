@@ -4,20 +4,25 @@ on: [push]
 #on: workflow_dispatch
 
 jobs:
-  Explore-GitHub-Actions:
+  Deploy-Documentation-Site:
     runs-on: ubuntu-latest
     steps:
-      - run: git clone https://github.com/RetroAchievements/docs
-      - run: |
-          ls
-          docker version
-      - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
-      - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
+      - name: Clone the wiki and prepare
+        run: |
+          git clone https://github.com/RetroAchievements/docs.wiki.git
+          cd docs.wiki
+          ln -sf Home.md index.md
+          echo -e "\n\n\n## Changelog\n\nLast 10 changes on this page:\n" >> Home.md
+          git log -n 10 --date=format:"%Y-%m-%d %H:%M" --pretty=format:"- \`[%cd] %cn:\` %s" Home.md >> Home.md
+          echo 'docs.retroachievements.org' > CNAME
+          cd ..
+
       - name: Check out repository code
         uses: actions/checkout@v2
+      
       - run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
       - run: echo "🖥️ The workflow is now ready to test your code on the runner."
       - name: List files in the repository
         run: |
-          ls ${{ github.workspace }}
+          ls
       - run: echo "🍏 This job's status is ${{ job.status }}."
