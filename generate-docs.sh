@@ -94,6 +94,7 @@ function main() {
     set -x
     git checkout -b gh-pages
     #git pull --rebase origin gh-pages
+    git pull --rebase
     git checkout master
     mkdocs gh-deploy
 }
