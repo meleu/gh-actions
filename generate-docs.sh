@@ -92,8 +92,8 @@ function main() {
     #docker container run --rm -v ${PWD}:/docs squidfunk/mkdocs-material gh-deploy --force
     
     set -x
-    git branch -D gh-pages
-    git checkout -t upstream/gh-pages
+    git checkout -b gh-pages
+    git pull --rebase origin gh-pages
     git checkout master
     mkdocs gh-deploy
 }
