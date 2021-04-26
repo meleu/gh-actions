@@ -16,5 +16,6 @@ jobs:
       - name: Deploying the documentation website...
         run: |
           git config user.name "${{ github.actor }}"
+          git config user.username "${{ github.actor }}"
           bash generate-docs.sh
 
