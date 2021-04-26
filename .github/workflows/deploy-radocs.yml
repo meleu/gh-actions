@@ -10,7 +10,10 @@ jobs:
       - uses: actions/setup-python@v2
         with:
           python-version: 3.x
-      - run: pip install mkdocs-material
-      - run: pip install git+https://github.com/cmitu/mkdocs-altlink-plugin
-      - run: bash generate-docs.sh
+      - run: |
+          pip install mkdocs-material
+          pip install git+https://github.com/cmitu/mkdocs-altlink-plugin
+      - run: |
+          git config user.name "{{ github.actor }}"
+          bash generate-docs.sh
 
