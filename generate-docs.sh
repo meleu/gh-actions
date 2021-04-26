@@ -96,7 +96,7 @@ function main() {
     # This `git pull` actually doesn't finish successfully,
     # but it makes the `mkdocs gh-deploy` work without `--force`.
     # see: https://github.com/mkdocs/mkdocs/issues/973
-    git pull --rebase
+    git pull --rebase origin gh-pages
     
     git checkout master
     
