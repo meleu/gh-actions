@@ -91,7 +91,6 @@ function main() {
 
     #docker container run --rm -v ${PWD}:/docs squidfunk/mkdocs-material gh-deploy --force
     
-    set -x
     git checkout -b gh-pages
     
     # This `git pull` actually doesn't finish successfully,
@@ -100,6 +99,7 @@ function main() {
     git pull --rebase
     
     git checkout master
+    
     mkdocs gh-deploy
 }
 
