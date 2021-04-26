@@ -90,6 +90,9 @@ function main() {
     echo
 
     #docker container run --rm -v ${PWD}:/docs squidfunk/mkdocs-material gh-deploy --force
+    git branch -D gh-pages
+    git checkout -t upstream/gh-pages
+    git checkout master
     mkdocs gh-deploy
 }
 
