@@ -92,10 +92,13 @@ function main() {
     #docker container run --rm -v ${PWD}:/docs squidfunk/mkdocs-material gh-deploy --force
     
     set -x
-    #git checkout -b gh-pages
-    ##git pull --rebase origin gh-pages
-    #git pull --rebase
-    git checkout -t upstream/gh-pages
+    git checkout -b gh-pages
+    
+    # This `git pull` actually doesn't finish successfully,
+    # but it makes the `mkdocs gh-deploy` work without `--force`.
+    # see: https://github.com/mkdocs/mkdocs/issues/973
+    git pull --rebase
+    
     git checkout master
     mkdocs gh-deploy
 }
